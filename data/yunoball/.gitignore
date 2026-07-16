@@ -1,0 +1,4 @@
+# Place a sanitized YunoBall export here as `export.json` to enable optional enrichment.
+# See docs/YUNOBALL_INTEGRATION.md. This folder must never contain credentials.
+*
+!.gitignore

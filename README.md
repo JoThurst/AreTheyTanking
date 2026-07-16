@@ -6,15 +6,16 @@ This repository is a static Astro site fed by curated/generated JSON. Browsers n
 
 ## Repository layout
 
-| Path          | Purpose                                                 |
-| ------------- | ------------------------------------------------------- |
-| `src/`        | Astro pages, layouts, components, and render-time types |
-| `content/`    | Methodology and editorial Markdown content              |
-| `data/`       | Curated/generated JSON consumed by the site             |
-| `scripts/`    | Validation and data-generation helpers                  |
-| `tests/`      | Unit and component tests (Vitest)                       |
-| `sprints/`    | Sprint implementation scopes                            |
-| `*.md` (root) | Product source-of-truth documents                       |
+| Path            | Purpose                                                 |
+| --------------- | ------------------------------------------------------- |
+| `src/`          | Astro pages, layouts, components, and render-time types |
+| `content/`      | Methodology and editorial Markdown content              |
+| `data/`         | Curated/generated JSON consumed by the site             |
+| `scripts/`      | Validation, ingest, and data-generation helpers         |
+| `src/pipeline/` | Core-stat adapters and normalized ingest contracts      |
+| `tests/`        | Unit and component tests (Vitest)                       |
+| `sprints/`      | Sprint implementation scopes                            |
+| `*.md` (root)   | Product source-of-truth documents                       |
 
 ## Prerequisites
 
@@ -30,24 +31,39 @@ npm run typecheck
 npm run test
 npm run validate:data
 npm run generate:seed
+npm run generate:public
+npm run ingest:core
+npm run ingest:yunoball
 npm run build
 npm run ci
 ```
 
-| Command                 | What it does                                                      |
-| ----------------------- | ----------------------------------------------------------------- |
-| `npm run dev`           | Local Astro development server                                    |
-| `npm run lint`          | ESLint                                                            |
-| `npm run typecheck`     | Astro check + TypeScript                                          |
-| `npm run test`          | Vitest unit tests                                                 |
-| `npm run validate:data` | Schema-validate seed/generated datasets                           |
-| `npm run generate:seed` | Regenerate `data/league-snapshot.json` from curated seed          |
-| `npm run build`         | Production static build into `dist/`                              |
-| `npm run ci`            | Format check, lint, typecheck, data validation, build, then tests |
+| Command                   | What it does                                                                     |
+| ------------------------- | -------------------------------------------------------------------------------- |
+| `npm run dev`             | Local Astro development server                                                   |
+| `npm run lint`            | ESLint                                                                           |
+| `npm run typecheck`       | Astro check + TypeScript                                                         |
+| `npm run test`            | Vitest unit tests                                                                |
+| `npm run validate:data`   | Schema-validate seed/generated datasets                                          |
+| `npm run generate:seed`   | Regenerate curated `data/editorial-snapshot.json` (+ matching public snapshot)   |
+| `npm run generate:public` | Merge automated facts into public `data/league-snapshot.json` + manifest         |
+| `npm run ingest:core`     | Normalize fixture core stats into `data/normalized-core-stats.json` (no network) |
+| `npm run ingest:yunoball` | Optional YunoBall sanitized export → enrichment (skips if absent)                |
+| `npm run build`           | Production static build into `dist/`                                             |
+| `npm run ci`              | Format check, lint, typecheck, data validation, build, then tests                |
+
+YunoBall decision and fallback: [`docs/YUNOBALL_INTEGRATION.md`](docs/YUNOBALL_INTEGRATION.md).  
+Pipeline freshness / recovery: [`docs/PIPELINE_RUNBOOK.md`](docs/PIPELINE_RUNBOOK.md).
 
 ## Continuous integration
 
 GitHub Actions workflow `.github/workflows/ci.yml` runs on pull requests and pushes to `main`/`master`. Steps mirror local commands: `npm ci`, then format check, lint, typecheck, `validate:data`, test, and build — so invalid seed data fails before the site build is accepted.
+
+## Scheduled pipeline and deploy
+
+`.github/workflows/pipeline-deploy.yml` runs on a daily schedule and via **workflow_dispatch**. It ingests core stats, optionally applies YunoBall enrichment, generates the public snapshot with last-known-good publish, validates, builds, commits refreshed `data/*` public files, then deploys `dist/` to GitHub Pages. Concurrency cancels older pipeline runs so they cannot overwrite newer output. Enable GitHub Pages (source: GitHub Actions) on the repository before the first deploy.
+
+Local equivalent: `npm run pipeline`.
 
 ## Product docs
 
@@ -58,7 +74,10 @@ Read in precedence order starting with `00_PROJECT_MASTER.md`. Sprint work lives
 - Runtime schemas: `src/schemas/index.ts` (Zod).
 - Shared TypeScript types: inferred with `z.infer` and re-exported from `src/types/index.ts`.
 - Canonical franchise IDs: `src/data/teamIds.ts` (exactly 30).
-- Published snapshot path: `data/league-snapshot.json` (created in ATT-003).
+- Published snapshot path: `data/league-snapshot.json` (site input; regenerated by `generate:public`).
+- Curated editorial base: `data/editorial-snapshot.json` (protected summaries/states/evidence/overrides).
+- Generation manifest: `data/generation-manifest.json` (input hashes + methodology version).
+- Pipeline status: `data/pipeline-status.json` (ok/failed, stale flag, last success time; no secrets).
 
 There is no separate JSON Schema codegen step in MVP. Generation scripts and the site import the same Zod modules so validation and types stay aligned.
 

@@ -1,1832 +1,1952 @@
 {
+  "evidence": [],
   "meta": {
-    "season": "2026-27",
-    "mode": "offseason",
-    "generatedAt": "2026-07-16T14:00:00.000Z",
-    "methodologyVersion": "0.1.0",
-    "stale": false,
-    "lastSuccessfulUpdateAt": "2026-07-16T14:00:00.000Z",
     "draftAssessment": {
+      "changeSincePrior": "Initial planning baseline for static MVP.",
+      "confidence": "low",
       "draftYear": 2027,
       "indexScore": 48,
-      "confidence": "low",
-      "topProspectTierCount": 1,
       "lotteryQualityTierCount": null,
-      "summary": "Early 2027 outlook is cooler than 2026; Tyran Stokes is the clearest top prospect while depth remains uncertain. Confidence is low in July 2026.",
       "lotteryRuleMode": "3-2-1 Lottery (2027–2029 drafts)",
+      "reviewedAt": "2026-07-16T14:00:00.000Z",
       "sources": [
         {
           "name": "NBA Board of Governors lottery approval",
-          "url": "https://www.nba.com/news/nba-board-governors-approve-new-draft-lottery-system",
-          "retrievedAt": "2026-07-16T14:00:00.000Z"
+          "retrievedAt": "2026-07-16T14:00:00.000Z",
+          "url": "https://www.nba.com/news/nba-board-governors-approve-new-draft-lottery-system"
         }
       ],
-      "reviewedAt": "2026-07-16T14:00:00.000Z",
-      "changeSincePrior": "Initial planning baseline for static MVP."
-    }
+      "summary": "Early 2027 outlook is cooler than 2026; Tyran Stokes is the clearest top prospect while depth remains uncertain. Confidence is low in July 2026.",
+      "topProspectTierCount": 1
+    },
+    "generatedAt": "2026-07-16T18:16:39.947Z",
+    "lastSuccessfulUpdateAt": "2026-07-16T18:16:39.947Z",
+    "methodologyVersion": "0.1.0",
+    "mode": "offseason",
+    "season": "2026-27",
+    "stale": false
   },
+  "overrides": [],
   "teams": [
     {
-      "teamId": "ATL",
-      "season": "2026-27",
-      "mode": "offseason",
+      "competitiveIntent": "unknown",
       "competitiveState": "Playoff Push",
-      "tankScore": 22,
-      "scoreBand": "Competitive",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 62
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 28
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
       "confidence": "low",
-      "teamStrength": 62,
       "draftIncentive": 28,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Playoff-oriented roster outlook; offseason planning data only — no live deployment signals.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 62,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 28,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Expected to control own first-round pick; verification pending automation.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
       "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
       "identity": {
-        "teamId": "ATL",
-        "name": "Atlanta Hawks",
         "abbreviation": "ATL",
+        "city": "Atlanta",
+        "conference": "East",
+        "division": "Southeast",
+        "name": "Atlanta Hawks",
         "slug": "atlanta-hawks",
-        "conference": "East",
-        "division": "Southeast",
-        "city": "Atlanta"
-      }
-    },
-    {
-      "teamId": "BOS",
-      "season": "2026-27",
-      "mode": "offseason",
-      "competitiveState": "Contender",
-      "tankScore": 8,
-      "scoreBand": "Full Competition",
-      "confidence": "low",
-      "teamStrength": 88,
-      "draftIncentive": 12,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
+        "teamId": "ATL"
       },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Contender-level roster strength with low draft incentive in this planning snapshot.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 88,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 12,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
       "pickContext": {
-        "summary": "Own first-round pick likely late; low incentive to lose.",
         "ownsPick": true,
         "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
+        "sources": [],
+        "summary": "Expected to control own first-round pick; verification pending automation.",
+        "verificationDate": "2026-07-16"
       },
-      "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
+      "recentForm": {
+        "label": "4-6",
+        "last10Losses": 6,
+        "last10Wins": 4
+      },
+      "record": {
+        "losses": 42,
+        "wins": 40
+      },
+      "scoreBand": "Competitive",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
       "stale": false,
-      "identity": {
-        "teamId": "BOS",
-        "name": "Boston Celtics",
-        "abbreviation": "BOS",
-        "slug": "boston-celtics",
-        "conference": "East",
-        "division": "Atlantic",
-        "city": "Boston"
-      }
+      "summary": "Playoff-oriented roster outlook; offseason planning data only — no live deployment signals.",
+      "tankScore": 22,
+      "teamId": "ATL",
+      "teamStrength": 62,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
     },
     {
-      "teamId": "BKN",
-      "season": "2026-27",
-      "mode": "offseason",
+      "competitiveIntent": "unknown",
       "competitiveState": "Rebuilding",
-      "tankScore": 64,
-      "scoreBand": "Tank Watch",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 32
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 74
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
       "confidence": "low",
-      "teamStrength": 32,
       "draftIncentive": 74,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Rebuild-oriented outlook with elevated draft incentive; intent not inferred from record.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 32,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 74,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Likely controls 2027 first-round benefit; protections need dated verification.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
       "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
       "identity": {
-        "teamId": "BKN",
-        "name": "Brooklyn Nets",
         "abbreviation": "BKN",
+        "city": "Brooklyn",
+        "conference": "East",
+        "division": "Atlantic",
+        "name": "Brooklyn Nets",
         "slug": "brooklyn-nets",
-        "conference": "East",
-        "division": "Atlantic",
-        "city": "Brooklyn"
-      }
+        "teamId": "BKN"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Likely controls 2027 first-round benefit; protections need dated verification.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "2-8",
+        "last10Losses": 8,
+        "last10Wins": 2
+      },
+      "record": {
+        "losses": 56,
+        "wins": 26
+      },
+      "scoreBand": "Tank Watch",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Rebuild-oriented outlook with elevated draft incentive; intent not inferred from record.",
+      "tankScore": 64,
+      "teamId": "BKN",
+      "teamStrength": 32,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
     },
     {
-      "teamId": "CHA",
-      "season": "2026-27",
-      "mode": "offseason",
-      "competitiveState": "Development Season",
-      "tankScore": 58,
-      "scoreBand": "Direction Unclear",
+      "competitiveIntent": "unknown",
+      "competitiveState": "Contender",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 88
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 12
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
       "confidence": "low",
-      "teamStrength": 36,
+      "draftIncentive": 12,
+      "evidenceIds": [],
+      "identity": {
+        "abbreviation": "BOS",
+        "city": "Boston",
+        "conference": "East",
+        "division": "Atlantic",
+        "name": "Boston Celtics",
+        "slug": "boston-celtics",
+        "teamId": "BOS"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Own first-round pick likely late; low incentive to lose.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "7-3",
+        "last10Losses": 3,
+        "last10Wins": 7
+      },
+      "record": {
+        "losses": 21,
+        "wins": 61
+      },
+      "scoreBand": "Full Competition",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Contender-level roster strength with low draft incentive in this planning snapshot.",
+      "tankScore": 8,
+      "teamId": "BOS",
+      "teamStrength": 88,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
+    },
+    {
+      "competitiveIntent": "unknown",
+      "competitiveState": "Development Season",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 36
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 70
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
+      "confidence": "low",
       "draftIncentive": 70,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Development-season framing with meaningful draft incentive; not labeled as confirmed tanking.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 36,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 70,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Expected own-pick control for 2027; confirm protections before scoring automation.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
       "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
       "identity": {
-        "teamId": "CHA",
-        "name": "Charlotte Hornets",
         "abbreviation": "CHA",
+        "city": "Charlotte",
+        "conference": "East",
+        "division": "Southeast",
+        "name": "Charlotte Hornets",
         "slug": "charlotte-hornets",
-        "conference": "East",
-        "division": "Southeast",
-        "city": "Charlotte"
-      }
+        "teamId": "CHA"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Expected own-pick control for 2027; confirm protections before scoring automation.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "1-9",
+        "last10Losses": 9,
+        "last10Wins": 1
+      },
+      "record": {
+        "losses": 63,
+        "wins": 19
+      },
+      "scoreBand": "Direction Unclear",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Development-season framing with meaningful draft incentive; not labeled as confirmed tanking.",
+      "tankScore": 58,
+      "teamId": "CHA",
+      "teamStrength": 36,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
     },
     {
-      "teamId": "CHI",
-      "season": "2026-27",
-      "mode": "offseason",
+      "competitiveIntent": "unknown",
       "competitiveState": "Crossroads",
-      "tankScore": 44,
-      "scoreBand": "Direction Unclear",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 48
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 52
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
       "confidence": "low",
-      "teamStrength": 48,
       "draftIncentive": 52,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Crossroads roster direction; Tank Score remains mid-range until evidence is reviewed.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 48,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 52,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Pick control/protection status marked unknown pending verification.",
-        "ownsPick": null,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
       "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
       "identity": {
-        "teamId": "CHI",
-        "name": "Chicago Bulls",
         "abbreviation": "CHI",
+        "city": "Chicago",
+        "conference": "East",
+        "division": "Central",
+        "name": "Chicago Bulls",
         "slug": "chicago-bulls",
-        "conference": "East",
-        "division": "Central",
-        "city": "Chicago"
-      }
+        "teamId": "CHI"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": null,
+        "protections": null,
+        "sources": [],
+        "summary": "Pick control/protection status marked unknown pending verification.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "5-5",
+        "last10Losses": 5,
+        "last10Wins": 5
+      },
+      "record": {
+        "losses": 43,
+        "wins": 39
+      },
+      "scoreBand": "Direction Unclear",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Crossroads roster direction; Tank Score remains mid-range until evidence is reviewed.",
+      "tankScore": 44,
+      "teamId": "CHI",
+      "teamStrength": 48,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
     },
     {
-      "teamId": "CLE",
-      "season": "2026-27",
-      "mode": "offseason",
+      "competitiveIntent": "unknown",
       "competitiveState": "Contender",
-      "tankScore": 12,
-      "scoreBand": "Full Competition",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 82
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 16
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
       "confidence": "low",
-      "teamStrength": 82,
       "draftIncentive": 16,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Strong competitive outlook with limited draft incentive in the offseason seed.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 82,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 16,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Late own pick expected; losing provides little practical draft benefit.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
       "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
       "identity": {
-        "teamId": "CLE",
-        "name": "Cleveland Cavaliers",
         "abbreviation": "CLE",
+        "city": "Cleveland",
+        "conference": "East",
+        "division": "Central",
+        "name": "Cleveland Cavaliers",
         "slug": "cleveland-cavaliers",
-        "conference": "East",
-        "division": "Central",
-        "city": "Cleveland"
-      }
+        "teamId": "CLE"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Late own pick expected; losing provides little practical draft benefit.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "8-2",
+        "last10Losses": 2,
+        "last10Wins": 8
+      },
+      "record": {
+        "losses": 18,
+        "wins": 64
+      },
+      "scoreBand": "Full Competition",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Strong competitive outlook with limited draft incentive in the offseason seed.",
+      "tankScore": 12,
+      "teamId": "CLE",
+      "teamStrength": 82,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
     },
     {
-      "teamId": "DAL",
-      "season": "2026-27",
-      "mode": "offseason",
+      "competitiveIntent": "unknown",
       "competitiveState": "Playoff Push",
-      "tankScore": 18,
-      "scoreBand": "Full Competition",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 70
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 22
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
       "confidence": "low",
-      "teamStrength": 70,
       "draftIncentive": 22,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Playoff-push planning posture; strength shown separately from any tank signal.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 70,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 22,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Own-pick control assumed for seed; verify swaps/protections later.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
       "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
       "identity": {
-        "teamId": "DAL",
-        "name": "Dallas Mavericks",
         "abbreviation": "DAL",
+        "city": "Dallas",
+        "conference": "West",
+        "division": "Southwest",
+        "name": "Dallas Mavericks",
         "slug": "dallas-mavericks",
-        "conference": "West",
-        "division": "Southwest",
-        "city": "Dallas"
-      }
+        "teamId": "DAL"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Own-pick control assumed for seed; verify swaps/protections later.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "4-6",
+        "last10Losses": 6,
+        "last10Wins": 4
+      },
+      "record": {
+        "losses": 43,
+        "wins": 39
+      },
+      "scoreBand": "Full Competition",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Playoff-push planning posture; strength shown separately from any tank signal.",
+      "tankScore": 18,
+      "teamId": "DAL",
+      "teamStrength": 70,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
     },
     {
-      "teamId": "DEN",
-      "season": "2026-27",
-      "mode": "offseason",
+      "competitiveIntent": "unknown",
       "competitiveState": "Contender",
-      "tankScore": 10,
-      "scoreBand": "Full Competition",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 84
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 14
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
       "confidence": "low",
-      "teamStrength": 84,
       "draftIncentive": 14,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Contender seed profile: high strength, low tank signal, low confidence (offseason).",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 84,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 14,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Late first-round outlook; low draft incentive from losing.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
       "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
       "identity": {
-        "teamId": "DEN",
-        "name": "Denver Nuggets",
         "abbreviation": "DEN",
+        "city": "Denver",
+        "conference": "West",
+        "division": "Northwest",
+        "name": "Denver Nuggets",
         "slug": "denver-nuggets",
-        "conference": "West",
-        "division": "Northwest",
-        "city": "Denver"
-      }
+        "teamId": "DEN"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Late first-round outlook; low draft incentive from losing.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "6-4",
+        "last10Losses": 4,
+        "last10Wins": 6
+      },
+      "record": {
+        "losses": 32,
+        "wins": 50
+      },
+      "scoreBand": "Full Competition",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Contender seed profile: high strength, low tank signal, low confidence (offseason).",
+      "tankScore": 10,
+      "teamId": "DEN",
+      "teamStrength": 84,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
     },
     {
-      "teamId": "DET",
-      "season": "2026-27",
-      "mode": "offseason",
+      "competitiveIntent": "unknown",
       "competitiveState": "Play-In Fight",
-      "tankScore": 26,
-      "scoreBand": "Competitive",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 58
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 34
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
       "confidence": "low",
-      "teamStrength": 58,
       "draftIncentive": 34,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Improving competitive trajectory in planning data; not treated as a tanking case.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 58,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 34,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Likely owns pick; incentive moderated by rising win expectation.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
       "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
       "identity": {
-        "teamId": "DET",
-        "name": "Detroit Pistons",
         "abbreviation": "DET",
+        "city": "Detroit",
+        "conference": "East",
+        "division": "Central",
+        "name": "Detroit Pistons",
         "slug": "detroit-pistons",
-        "conference": "East",
-        "division": "Central",
-        "city": "Detroit"
-      }
+        "teamId": "DET"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Likely owns pick; incentive moderated by rising win expectation.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "5-5",
+        "last10Losses": 5,
+        "last10Wins": 5
+      },
+      "record": {
+        "losses": 38,
+        "wins": 44
+      },
+      "scoreBand": "Competitive",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Improving competitive trajectory in planning data; not treated as a tanking case.",
+      "tankScore": 26,
+      "teamId": "DET",
+      "teamStrength": 58,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
     },
     {
-      "teamId": "GSW",
-      "season": "2026-27",
-      "mode": "offseason",
+      "competitiveIntent": "unknown",
       "competitiveState": "Playoff Push",
-      "tankScore": 20,
-      "scoreBand": "Competitive",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 66
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 24
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
       "confidence": "low",
-      "teamStrength": 66,
       "draftIncentive": 24,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Playoff-oriented offseason outlook; deployment intent marked unknown.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 66,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 24,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Own pick expected; confirm any outgoing protections separately.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
       "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
       "identity": {
-        "teamId": "GSW",
-        "name": "Golden State Warriors",
         "abbreviation": "GSW",
+        "city": "Golden State",
+        "conference": "West",
+        "division": "Pacific",
+        "name": "Golden State Warriors",
         "slug": "golden-state-warriors",
-        "conference": "West",
-        "division": "Pacific",
-        "city": "Golden State"
-      }
+        "teamId": "GSW"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Own pick expected; confirm any outgoing protections separately.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "6-4",
+        "last10Losses": 4,
+        "last10Wins": 6
+      },
+      "record": {
+        "losses": 34,
+        "wins": 48
+      },
+      "scoreBand": "Competitive",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Playoff-oriented offseason outlook; deployment intent marked unknown.",
+      "tankScore": 20,
+      "teamId": "GSW",
+      "teamStrength": 66,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
     },
     {
-      "teamId": "HOU",
-      "season": "2026-27",
-      "mode": "offseason",
+      "competitiveIntent": "unknown",
       "competitiveState": "Playoff Push",
-      "tankScore": 16,
-      "scoreBand": "Full Competition",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 72
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 20
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
       "confidence": "low",
-      "teamStrength": 72,
       "draftIncentive": 20,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Rising competitive roster; low tank signal in this curated seed.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 72,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 20,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Controls own first-round pick in seed assumptions.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
       "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
       "identity": {
-        "teamId": "HOU",
-        "name": "Houston Rockets",
         "abbreviation": "HOU",
+        "city": "Houston",
+        "conference": "West",
+        "division": "Southwest",
+        "name": "Houston Rockets",
         "slug": "houston-rockets",
-        "conference": "West",
-        "division": "Southwest",
-        "city": "Houston"
-      }
+        "teamId": "HOU"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Controls own first-round pick in seed assumptions.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "7-3",
+        "last10Losses": 3,
+        "last10Wins": 7
+      },
+      "record": {
+        "losses": 30,
+        "wins": 52
+      },
+      "scoreBand": "Full Competition",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Rising competitive roster; low tank signal in this curated seed.",
+      "tankScore": 16,
+      "teamId": "HOU",
+      "teamStrength": 72,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
     },
     {
-      "teamId": "IND",
-      "season": "2026-27",
-      "mode": "offseason",
+      "competitiveIntent": "unknown",
       "competitiveState": "Playoff Push",
-      "tankScore": 24,
-      "scoreBand": "Competitive",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 64
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 26
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
       "confidence": "low",
-      "teamStrength": 64,
       "draftIncentive": 26,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Competitive East outlook. Historical 2025-26 league action is timeline context only in this seed (no fabricated scoring evidence).",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 64,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 26,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Own-pick control assumed; verify before automated draft-incentive scoring.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
       "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
       "identity": {
-        "teamId": "IND",
-        "name": "Indiana Pacers",
         "abbreviation": "IND",
+        "city": "Indiana",
+        "conference": "East",
+        "division": "Central",
+        "name": "Indiana Pacers",
         "slug": "indiana-pacers",
-        "conference": "East",
-        "division": "Central",
-        "city": "Indiana"
-      }
+        "teamId": "IND"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Own-pick control assumed; verify before automated draft-incentive scoring.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "5-5",
+        "last10Losses": 5,
+        "last10Wins": 5
+      },
+      "record": {
+        "losses": 32,
+        "wins": 50
+      },
+      "scoreBand": "Competitive",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Competitive East outlook. Historical 2025-26 league action is timeline context only in this seed (no fabricated scoring evidence).",
+      "tankScore": 24,
+      "teamId": "IND",
+      "teamStrength": 64,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
     },
     {
-      "teamId": "LAC",
-      "season": "2026-27",
-      "mode": "offseason",
+      "competitiveIntent": "unknown",
       "competitiveState": "Playoff Push",
-      "tankScore": 19,
-      "scoreBand": "Full Competition",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 68
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 21
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
       "confidence": "low",
-      "teamStrength": 68,
       "draftIncentive": 21,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Playoff-push seed profile with modest draft incentive.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 68,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 21,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Own pick assumed for planning; confirm outgoing obligations later.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
       "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
       "identity": {
-        "teamId": "LAC",
-        "name": "LA Clippers",
         "abbreviation": "LAC",
-        "slug": "la-clippers",
+        "city": "LA",
         "conference": "West",
         "division": "Pacific",
-        "city": "LA"
-      }
+        "name": "LA Clippers",
+        "slug": "la-clippers",
+        "teamId": "LAC"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Own pick assumed for planning; confirm outgoing obligations later.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "6-4",
+        "last10Losses": 4,
+        "last10Wins": 6
+      },
+      "record": {
+        "losses": 32,
+        "wins": 50
+      },
+      "scoreBand": "Full Competition",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Playoff-push seed profile with modest draft incentive.",
+      "tankScore": 19,
+      "teamId": "LAC",
+      "teamStrength": 68,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
     },
     {
-      "teamId": "LAL",
-      "season": "2026-27",
-      "mode": "offseason",
-      "competitiveState": "Playoff Push",
-      "tankScore": 17,
-      "scoreBand": "Full Competition",
-      "confidence": "low",
-      "teamStrength": 71,
-      "draftIncentive": 18,
       "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Competitive roster outlook; Tank Score stays low absent contradictory evidence.",
+      "competitiveState": "Playoff Push",
       "components": [
         {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
           "key": "team_strength",
-          "value": 71,
           "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
+          "value": 71
         },
         {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
           "key": "draft_incentive",
-          "value": 18,
           "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
+          "value": 18
         },
         {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
           "key": "competitive_intent",
-          "value": "unknown",
           "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
+          "value": "unknown"
         }
       ],
+      "confidence": "low",
+      "draftIncentive": 18,
+      "evidenceIds": [],
+      "identity": {
+        "abbreviation": "LAL",
+        "city": "Los Angeles",
+        "conference": "West",
+        "division": "Pacific",
+        "name": "Los Angeles Lakers",
+        "slug": "los-angeles-lakers",
+        "teamId": "LAL"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
       "pickContext": {
-        "summary": "Pick ownership/protection requires dated source verification.",
         "ownsPick": null,
         "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
+        "sources": [],
+        "summary": "Pick ownership/protection requires dated source verification.",
+        "verificationDate": "2026-07-16"
       },
-      "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
+      "recentForm": {
+        "label": "5-5",
+        "last10Losses": 5,
+        "last10Wins": 5
+      },
+      "record": {
+        "losses": 32,
+        "wins": 50
+      },
+      "scoreBand": "Full Competition",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
       "stale": false,
-      "identity": {
-        "teamId": "LAL",
-        "name": "Los Angeles Lakers",
-        "abbreviation": "LAL",
-        "slug": "los-angeles-lakers",
-        "conference": "West",
-        "division": "Pacific",
-        "city": "Los Angeles"
-      }
+      "summary": "Competitive roster outlook; Tank Score stays low absent contradictory evidence.",
+      "tankScore": 17,
+      "teamId": "LAL",
+      "teamStrength": 71,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
     },
     {
-      "teamId": "MEM",
-      "season": "2026-27",
-      "mode": "offseason",
-      "competitiveState": "Crossroads",
-      "tankScore": 40,
-      "scoreBand": "Direction Unclear",
-      "confidence": "low",
-      "teamStrength": 52,
-      "draftIncentive": 48,
       "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Crossroads planning snapshot; strength and incentive both mid-range.",
+      "competitiveState": "Crossroads",
       "components": [
         {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
           "key": "team_strength",
-          "value": 52,
           "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
+          "value": 52
         },
         {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
           "key": "draft_incentive",
-          "value": 48,
           "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
+          "value": 48
         },
         {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
           "key": "competitive_intent",
-          "value": "unknown",
           "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
+          "value": "unknown"
         }
       ],
-      "pickContext": {
-        "summary": "Seed assumes own-pick control pending verification.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
+      "confidence": "low",
+      "draftIncentive": 48,
       "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
       "identity": {
-        "teamId": "MEM",
-        "name": "Memphis Grizzlies",
         "abbreviation": "MEM",
-        "slug": "memphis-grizzlies",
+        "city": "Memphis",
         "conference": "West",
         "division": "Southwest",
-        "city": "Memphis"
-      }
-    },
-    {
-      "teamId": "MIA",
-      "season": "2026-27",
-      "mode": "offseason",
-      "competitiveState": "Play-In Fight",
-      "tankScore": 28,
-      "scoreBand": "Competitive",
-      "confidence": "low",
-      "teamStrength": 55,
-      "draftIncentive": 36,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
+        "name": "Memphis Grizzlies",
+        "slug": "memphis-grizzlies",
+        "teamId": "MEM"
       },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Play-in competitive framing; not a high tank-signal seed case.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 55,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 36,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
       "pickContext": {
-        "summary": "Likely owns 2027 first-round pick in seed assumptions.",
         "ownsPick": true,
         "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
+        "sources": [],
+        "summary": "Seed assumes own-pick control pending verification.",
+        "verificationDate": "2026-07-16"
       },
-      "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
+      "recentForm": {
+        "label": "4-6",
+        "last10Losses": 6,
+        "last10Wins": 4
+      },
+      "record": {
+        "losses": 34,
+        "wins": 48
+      },
+      "scoreBand": "Direction Unclear",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
       "stale": false,
+      "summary": "Crossroads planning snapshot; strength and incentive both mid-range.",
+      "tankScore": 40,
+      "teamId": "MEM",
+      "teamStrength": 52,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
+    },
+    {
+      "competitiveIntent": "unknown",
+      "competitiveState": "Play-In Fight",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 55
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 36
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
+      "confidence": "low",
+      "draftIncentive": 36,
+      "evidenceIds": [],
       "identity": {
-        "teamId": "MIA",
-        "name": "Miami Heat",
         "abbreviation": "MIA",
-        "slug": "miami-heat",
+        "city": "Miami",
         "conference": "East",
         "division": "Southeast",
-        "city": "Miami"
-      }
-    },
-    {
-      "teamId": "MIL",
-      "season": "2026-27",
-      "mode": "offseason",
-      "competitiveState": "Playoff Push",
-      "tankScore": 21,
-      "scoreBand": "Competitive",
-      "confidence": "low",
-      "teamStrength": 69,
-      "draftIncentive": 25,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
+        "name": "Miami Heat",
+        "slug": "miami-heat",
+        "teamId": "MIA"
       },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Playoff-push offseason outlook with limited draft incentive.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 69,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 25,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
       "pickContext": {
-        "summary": "Own-pick control assumed; confirm any protections before automation.",
         "ownsPick": true,
         "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
+        "sources": [],
+        "summary": "Likely owns 2027 first-round pick in seed assumptions.",
+        "verificationDate": "2026-07-16"
       },
-      "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
+      "recentForm": {
+        "label": "3-7",
+        "last10Losses": 7,
+        "last10Wins": 3
+      },
+      "record": {
+        "losses": 45,
+        "wins": 37
+      },
+      "scoreBand": "Competitive",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
       "stale": false,
+      "summary": "Play-in competitive framing; not a high tank-signal seed case.",
+      "tankScore": 28,
+      "teamId": "MIA",
+      "teamStrength": 55,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
+    },
+    {
+      "competitiveIntent": "unknown",
+      "competitiveState": "Playoff Push",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 69
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 25
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
+      "confidence": "low",
+      "draftIncentive": 25,
+      "evidenceIds": [],
       "identity": {
-        "teamId": "MIL",
-        "name": "Milwaukee Bucks",
         "abbreviation": "MIL",
-        "slug": "milwaukee-bucks",
+        "city": "Milwaukee",
         "conference": "East",
         "division": "Central",
-        "city": "Milwaukee"
-      }
+        "name": "Milwaukee Bucks",
+        "slug": "milwaukee-bucks",
+        "teamId": "MIL"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Own-pick control assumed; confirm any protections before automation.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "5-5",
+        "last10Losses": 5,
+        "last10Wins": 5
+      },
+      "record": {
+        "losses": 34,
+        "wins": 48
+      },
+      "scoreBand": "Competitive",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Playoff-push offseason outlook with limited draft incentive.",
+      "tankScore": 21,
+      "teamId": "MIL",
+      "teamStrength": 69,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
     },
     {
-      "teamId": "MIN",
-      "season": "2026-27",
-      "mode": "offseason",
+      "competitiveIntent": "unknown",
       "competitiveState": "Contender",
-      "tankScore": 14,
-      "scoreBand": "Full Competition",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 80
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 15
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
       "confidence": "low",
-      "teamStrength": 80,
       "draftIncentive": 15,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Contender-leaning seed: high strength, low tank signal.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 80,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 15,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Late pick / low incentive profile in planning data.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
       "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
       "identity": {
-        "teamId": "MIN",
-        "name": "Minnesota Timberwolves",
         "abbreviation": "MIN",
+        "city": "Minnesota",
+        "conference": "West",
+        "division": "Northwest",
+        "name": "Minnesota Timberwolves",
         "slug": "minnesota-timberwolves",
-        "conference": "West",
-        "division": "Northwest",
-        "city": "Minnesota"
-      }
+        "teamId": "MIN"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Late pick / low incentive profile in planning data.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "6-4",
+        "last10Losses": 4,
+        "last10Wins": 6
+      },
+      "record": {
+        "losses": 33,
+        "wins": 49
+      },
+      "scoreBand": "Full Competition",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Contender-leaning seed: high strength, low tank signal.",
+      "tankScore": 14,
+      "teamId": "MIN",
+      "teamStrength": 80,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
     },
     {
-      "teamId": "NOP",
-      "season": "2026-27",
-      "mode": "offseason",
+      "competitiveIntent": "unknown",
       "competitiveState": "Crossroads",
-      "tankScore": 46,
-      "scoreBand": "Direction Unclear",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 44
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 56
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
       "confidence": "low",
-      "teamStrength": 44,
       "draftIncentive": 56,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Crossroads roster outlook; elevated draft incentive without fabricated deployment evidence.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 44,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 56,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Pick control marked for review; do not treat as verified.",
-        "ownsPick": null,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
       "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
       "identity": {
-        "teamId": "NOP",
-        "name": "New Orleans Pelicans",
         "abbreviation": "NOP",
+        "city": "New Orleans",
+        "conference": "West",
+        "division": "Southwest",
+        "name": "New Orleans Pelicans",
         "slug": "new-orleans-pelicans",
-        "conference": "West",
-        "division": "Southwest",
-        "city": "New Orleans"
-      }
-    },
-    {
-      "teamId": "NYK",
-      "season": "2026-27",
-      "mode": "offseason",
-      "competitiveState": "Contender",
-      "tankScore": 11,
-      "scoreBand": "Full Competition",
-      "confidence": "low",
-      "teamStrength": 83,
-      "draftIncentive": 13,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
+        "teamId": "NOP"
       },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Contender seed profile with low draft incentive.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 83,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 13,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Late own pick expected in planning baseline.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
-      "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
       "methodologyVersion": "0.1.0",
-      "stale": false,
-      "identity": {
-        "teamId": "NYK",
-        "name": "New York Knicks",
-        "abbreviation": "NYK",
-        "slug": "new-york-knicks",
-        "conference": "East",
-        "division": "Atlantic",
-        "city": "New York"
-      }
-    },
-    {
-      "teamId": "OKC",
-      "season": "2026-27",
       "mode": "offseason",
-      "competitiveState": "Contender",
-      "tankScore": 6,
-      "scoreBand": "Full Competition",
-      "confidence": "low",
-      "teamStrength": 92,
-      "draftIncentive": 8,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Top-tier competitive outlook; minimal tank signal in curated seed.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 92,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 8,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
       "pickContext": {
-        "summary": "Low draft incentive from current competitive standing.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
-      "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
-      "identity": {
-        "teamId": "OKC",
-        "name": "Oklahoma City Thunder",
-        "abbreviation": "OKC",
-        "slug": "oklahoma-city-thunder",
-        "conference": "West",
-        "division": "Northwest",
-        "city": "Oklahoma City"
-      }
-    },
-    {
-      "teamId": "ORL",
-      "season": "2026-27",
-      "mode": "offseason",
-      "competitiveState": "Playoff Push",
-      "tankScore": 23,
-      "scoreBand": "Competitive",
-      "confidence": "low",
-      "teamStrength": 63,
-      "draftIncentive": 30,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Playoff-push development core; strength separated from tank signal.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 63,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 30,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Own-pick control assumed for seed.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
-      "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
-      "identity": {
-        "teamId": "ORL",
-        "name": "Orlando Magic",
-        "abbreviation": "ORL",
-        "slug": "orlando-magic",
-        "conference": "East",
-        "division": "Southeast",
-        "city": "Orlando"
-      }
-    },
-    {
-      "teamId": "PHI",
-      "season": "2026-27",
-      "mode": "offseason",
-      "competitiveState": "Playoff Push",
-      "tankScore": 25,
-      "scoreBand": "Competitive",
-      "confidence": "low",
-      "teamStrength": 60,
-      "draftIncentive": 32,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Playoff-oriented planning data with moderate draft incentive.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 60,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 32,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Verify pick protections before draft-incentive automation.",
         "ownsPick": null,
         "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
+        "sources": [],
+        "summary": "Pick control marked for review; do not treat as verified.",
+        "verificationDate": "2026-07-16"
       },
-      "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
-      "identity": {
-        "teamId": "PHI",
-        "name": "Philadelphia 76ers",
-        "abbreviation": "PHI",
-        "slug": "philadelphia-76ers",
-        "conference": "East",
-        "division": "Atlantic",
-        "city": "Philadelphia"
-      }
-    },
-    {
-      "teamId": "PHX",
-      "season": "2026-27",
-      "mode": "offseason",
-      "competitiveState": "Play-In Fight",
-      "tankScore": 30,
-      "scoreBand": "Competitive",
-      "confidence": "low",
-      "teamStrength": 57,
-      "draftIncentive": 38,
-      "competitiveIntent": "unknown",
+      "recentForm": {
+        "label": "2-8",
+        "last10Losses": 8,
+        "last10Wins": 2
+      },
       "record": {
-        "wins": 0,
-        "losses": 0
+        "losses": 61,
+        "wins": 21
       },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Play-in competitive framing; seed does not treat losing as proof of tanking.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 57,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 38,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Pick ownership needs dated confirmation.",
-        "ownsPick": null,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
-      "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
-      "identity": {
-        "teamId": "PHX",
-        "name": "Phoenix Suns",
-        "abbreviation": "PHX",
-        "slug": "phoenix-suns",
-        "conference": "West",
-        "division": "Pacific",
-        "city": "Phoenix"
-      }
-    },
-    {
-      "teamId": "POR",
-      "season": "2026-27",
-      "mode": "offseason",
-      "competitiveState": "Rebuilding",
-      "tankScore": 68,
-      "scoreBand": "Tank Watch",
-      "confidence": "low",
-      "teamStrength": 30,
-      "draftIncentive": 78,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Rebuild / high draft-incentive outlook; competitive intent unknown without in-season deployment evidence.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 30,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 78,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Expected to benefit from 2027 lottery position if own pick is controlled.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
-      "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
-      "identity": {
-        "teamId": "POR",
-        "name": "Portland Trail Blazers",
-        "abbreviation": "POR",
-        "slug": "portland-trail-blazers",
-        "conference": "West",
-        "division": "Northwest",
-        "city": "Portland"
-      }
-    },
-    {
-      "teamId": "SAC",
-      "season": "2026-27",
-      "mode": "offseason",
-      "competitiveState": "Play-In Fight",
-      "tankScore": 33,
-      "scoreBand": "Competitive",
-      "confidence": "low",
-      "teamStrength": 54,
-      "draftIncentive": 40,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Play-in seed profile; mid tank signal without accepted scoring evidence.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 54,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 40,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Own-pick control assumed pending verification.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
-      "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
-      "identity": {
-        "teamId": "SAC",
-        "name": "Sacramento Kings",
-        "abbreviation": "SAC",
-        "slug": "sacramento-kings",
-        "conference": "West",
-        "division": "Pacific",
-        "city": "Sacramento"
-      }
-    },
-    {
-      "teamId": "SAS",
-      "season": "2026-27",
-      "mode": "offseason",
-      "competitiveState": "Development Season",
-      "tankScore": 42,
       "scoreBand": "Direction Unclear",
-      "confidence": "low",
-      "teamStrength": 50,
-      "draftIncentive": 50,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
       "scoreDelta7d": "unknown",
-      "summary": "Development-season outlook with balanced strength/incentive; bad is not treated as tanking.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 50,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 50,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
-      "pickContext": {
-        "summary": "Likely owns pick; incentive moderated as roster improves.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
-      "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
       "stale": false,
-      "identity": {
-        "teamId": "SAS",
-        "name": "San Antonio Spurs",
-        "abbreviation": "SAS",
-        "slug": "san-antonio-spurs",
-        "conference": "West",
-        "division": "Southwest",
-        "city": "San Antonio"
-      }
+      "summary": "Crossroads roster outlook; elevated draft incentive without fabricated deployment evidence.",
+      "tankScore": 46,
+      "teamId": "NOP",
+      "teamStrength": 44,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
     },
     {
-      "teamId": "TOR",
-      "season": "2026-27",
-      "mode": "offseason",
-      "competitiveState": "Rebuilding",
-      "tankScore": 61,
-      "scoreBand": "Tank Watch",
-      "confidence": "low",
-      "teamStrength": 34,
-      "draftIncentive": 72,
       "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
-      },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Rebuild-oriented seed with elevated draft incentive and empty evidence list.",
+      "competitiveState": "Contender",
       "components": [
         {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
           "key": "team_strength",
-          "value": 34,
           "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
+          "value": 83
         },
         {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
           "key": "draft_incentive",
-          "value": 72,
           "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
+          "value": 13
         },
         {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
           "key": "competitive_intent",
-          "value": "unknown",
           "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
+          "value": "unknown"
         }
       ],
-      "pickContext": {
-        "summary": "Expected own-pick benefit; confirm swaps/protections before automation.",
-        "ownsPick": true,
-        "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
-      },
+      "confidence": "low",
+      "draftIncentive": 13,
       "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
-      "stale": false,
       "identity": {
-        "teamId": "TOR",
-        "name": "Toronto Raptors",
-        "abbreviation": "TOR",
-        "slug": "toronto-raptors",
+        "abbreviation": "NYK",
+        "city": "New York",
         "conference": "East",
         "division": "Atlantic",
-        "city": "Toronto"
-      }
-    },
-    {
-      "teamId": "UTA",
-      "season": "2026-27",
-      "mode": "offseason",
-      "competitiveState": "Tank Watch",
-      "tankScore": 72,
-      "scoreBand": "Tank Watch",
-      "confidence": "low",
-      "teamStrength": 28,
-      "draftIncentive": 81,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
+        "name": "New York Knicks",
+        "slug": "new-york-knicks",
+        "teamId": "NYK"
       },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "High draft incentive and development-focused roster; live deployment evidence unavailable in the offseason. Historical league action is context only — not fabricated seed evidence.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 28,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 81,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
       "pickContext": {
-        "summary": "Expected to control 2027 first-round pick; protections unverified in seed data.",
         "ownsPick": true,
         "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
+        "sources": [],
+        "summary": "Late own pick expected in planning baseline.",
+        "verificationDate": "2026-07-16"
       },
-      "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
+      "recentForm": {
+        "label": "7-3",
+        "last10Losses": 3,
+        "last10Wins": 7
+      },
+      "record": {
+        "losses": 31,
+        "wins": 51
+      },
+      "scoreBand": "Full Competition",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
       "stale": false,
+      "summary": "Contender seed profile with low draft incentive.",
+      "tankScore": 11,
+      "teamId": "NYK",
+      "teamStrength": 83,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
+    },
+    {
+      "competitiveIntent": "unknown",
+      "competitiveState": "Contender",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 92
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 8
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
+      "confidence": "low",
+      "draftIncentive": 8,
+      "evidenceIds": [],
       "identity": {
-        "teamId": "UTA",
-        "name": "Utah Jazz",
-        "abbreviation": "UTA",
-        "slug": "utah-jazz",
+        "abbreviation": "OKC",
+        "city": "Oklahoma City",
         "conference": "West",
         "division": "Northwest",
-        "city": "Utah"
-      }
-    },
-    {
-      "teamId": "WAS",
-      "season": "2026-27",
-      "mode": "offseason",
-      "competitiveState": "Rebuilding",
-      "tankScore": 70,
-      "scoreBand": "Tank Watch",
-      "confidence": "low",
-      "teamStrength": 26,
-      "draftIncentive": 80,
-      "competitiveIntent": "unknown",
-      "record": {
-        "wins": 0,
-        "losses": 0
+        "name": "Oklahoma City Thunder",
+        "slug": "oklahoma-city-thunder",
+        "teamId": "OKC"
       },
-      "recentForm": null,
-      "scoreDelta7d": "unknown",
-      "summary": "Rebuild / high draft-incentive planning snapshot; confidence low and evidence empty by design.",
-      "components": [
-        {
-          "key": "team_strength",
-          "value": 26,
-          "label": "Team strength",
-          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation."
-        },
-        {
-          "key": "draft_incentive",
-          "value": 80,
-          "label": "Draft incentive",
-          "explanation": "Curated planning estimate from pick outlook and early 2027 class context."
-        },
-        {
-          "key": "competitive_intent",
-          "value": "unknown",
-          "label": "Competitive intent",
-          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero."
-        }
-      ],
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
       "pickContext": {
-        "summary": "Likely controls lottery-relevant pick; verify before scoring automation.",
         "ownsPick": true,
         "protections": null,
-        "verificationDate": "2026-07-16",
-        "sources": []
+        "sources": [],
+        "summary": "Low draft incentive from current competitive standing.",
+        "verificationDate": "2026-07-16"
       },
-      "evidenceIds": [],
-      "updatedAt": "2026-07-16T14:00:00.000Z",
-      "sourceRetrievedAt": null,
-      "methodologyVersion": "0.1.0",
+      "recentForm": {
+        "label": "9-1",
+        "last10Losses": 1,
+        "last10Wins": 9
+      },
+      "record": {
+        "losses": 14,
+        "wins": 68
+      },
+      "scoreBand": "Full Competition",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
       "stale": false,
+      "summary": "Top-tier competitive outlook; minimal tank signal in curated seed.",
+      "tankScore": 6,
+      "teamId": "OKC",
+      "teamStrength": 92,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
+    },
+    {
+      "competitiveIntent": "unknown",
+      "competitiveState": "Playoff Push",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 63
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 30
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
+      "confidence": "low",
+      "draftIncentive": 30,
+      "evidenceIds": [],
       "identity": {
-        "teamId": "WAS",
-        "name": "Washington Wizards",
-        "abbreviation": "WAS",
-        "slug": "washington-wizards",
+        "abbreviation": "ORL",
+        "city": "Orlando",
         "conference": "East",
         "division": "Southeast",
-        "city": "Washington"
-      }
+        "name": "Orlando Magic",
+        "slug": "orlando-magic",
+        "teamId": "ORL"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Own-pick control assumed for seed.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "5-5",
+        "last10Losses": 5,
+        "last10Wins": 5
+      },
+      "record": {
+        "losses": 41,
+        "wins": 41
+      },
+      "scoreBand": "Competitive",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Playoff-push development core; strength separated from tank signal.",
+      "tankScore": 23,
+      "teamId": "ORL",
+      "teamStrength": 63,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
+    },
+    {
+      "competitiveIntent": "unknown",
+      "competitiveState": "Playoff Push",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 60
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 32
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
+      "confidence": "low",
+      "draftIncentive": 32,
+      "evidenceIds": [],
+      "identity": {
+        "abbreviation": "PHI",
+        "city": "Philadelphia",
+        "conference": "East",
+        "division": "Atlantic",
+        "name": "Philadelphia 76ers",
+        "slug": "philadelphia-76ers",
+        "teamId": "PHI"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": null,
+        "protections": null,
+        "sources": [],
+        "summary": "Verify pick protections before draft-incentive automation.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "2-8",
+        "last10Losses": 8,
+        "last10Wins": 2
+      },
+      "record": {
+        "losses": 58,
+        "wins": 24
+      },
+      "scoreBand": "Competitive",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Playoff-oriented planning data with moderate draft incentive.",
+      "tankScore": 25,
+      "teamId": "PHI",
+      "teamStrength": 60,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
+    },
+    {
+      "competitiveIntent": "unknown",
+      "competitiveState": "Play-In Fight",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 57
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 38
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
+      "confidence": "low",
+      "draftIncentive": 38,
+      "evidenceIds": [],
+      "identity": {
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "conference": "West",
+        "division": "Pacific",
+        "name": "Phoenix Suns",
+        "slug": "phoenix-suns",
+        "teamId": "PHX"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": null,
+        "protections": null,
+        "sources": [],
+        "summary": "Pick ownership needs dated confirmation.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "3-7",
+        "last10Losses": 7,
+        "last10Wins": 3
+      },
+      "record": {
+        "losses": 46,
+        "wins": 36
+      },
+      "scoreBand": "Competitive",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Play-in competitive framing; seed does not treat losing as proof of tanking.",
+      "tankScore": 30,
+      "teamId": "PHX",
+      "teamStrength": 57,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
+    },
+    {
+      "competitiveIntent": "unknown",
+      "competitiveState": "Rebuilding",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 30
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 78
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
+      "confidence": "low",
+      "draftIncentive": 78,
+      "evidenceIds": [],
+      "identity": {
+        "abbreviation": "POR",
+        "city": "Portland",
+        "conference": "West",
+        "division": "Northwest",
+        "name": "Portland Trail Blazers",
+        "slug": "portland-trail-blazers",
+        "teamId": "POR"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Expected to benefit from 2027 lottery position if own pick is controlled.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "4-6",
+        "last10Losses": 6,
+        "last10Wins": 4
+      },
+      "record": {
+        "losses": 46,
+        "wins": 36
+      },
+      "scoreBand": "Tank Watch",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Rebuild / high draft-incentive outlook; competitive intent unknown without in-season deployment evidence.",
+      "tankScore": 68,
+      "teamId": "POR",
+      "teamStrength": 30,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
+    },
+    {
+      "competitiveIntent": "unknown",
+      "competitiveState": "Play-In Fight",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 54
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 40
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
+      "confidence": "low",
+      "draftIncentive": 40,
+      "evidenceIds": [],
+      "identity": {
+        "abbreviation": "SAC",
+        "city": "Sacramento",
+        "conference": "West",
+        "division": "Pacific",
+        "name": "Sacramento Kings",
+        "slug": "sacramento-kings",
+        "teamId": "SAC"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Own-pick control assumed pending verification.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "4-6",
+        "last10Losses": 6,
+        "last10Wins": 4
+      },
+      "record": {
+        "losses": 42,
+        "wins": 40
+      },
+      "scoreBand": "Competitive",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Play-in seed profile; mid tank signal without accepted scoring evidence.",
+      "tankScore": 33,
+      "teamId": "SAC",
+      "teamStrength": 54,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
+    },
+    {
+      "competitiveIntent": "unknown",
+      "competitiveState": "Development Season",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 50
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 50
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
+      "confidence": "low",
+      "draftIncentive": 50,
+      "evidenceIds": [],
+      "identity": {
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "conference": "West",
+        "division": "Southwest",
+        "name": "San Antonio Spurs",
+        "slug": "san-antonio-spurs",
+        "teamId": "SAS"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Likely owns pick; incentive moderated as roster improves.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "3-7",
+        "last10Losses": 7,
+        "last10Wins": 3
+      },
+      "record": {
+        "losses": 48,
+        "wins": 34
+      },
+      "scoreBand": "Direction Unclear",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Development-season outlook with balanced strength/incentive; bad is not treated as tanking.",
+      "tankScore": 42,
+      "teamId": "SAS",
+      "teamStrength": 50,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
+    },
+    {
+      "competitiveIntent": "unknown",
+      "competitiveState": "Rebuilding",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 34
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 72
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
+      "confidence": "low",
+      "draftIncentive": 72,
+      "evidenceIds": [],
+      "identity": {
+        "abbreviation": "TOR",
+        "city": "Toronto",
+        "conference": "East",
+        "division": "Atlantic",
+        "name": "Toronto Raptors",
+        "slug": "toronto-raptors",
+        "teamId": "TOR"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Expected own-pick benefit; confirm swaps/protections before automation.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "3-7",
+        "last10Losses": 7,
+        "last10Wins": 3
+      },
+      "record": {
+        "losses": 52,
+        "wins": 30
+      },
+      "scoreBand": "Tank Watch",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Rebuild-oriented seed with elevated draft incentive and empty evidence list.",
+      "tankScore": 61,
+      "teamId": "TOR",
+      "teamStrength": 34,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
+    },
+    {
+      "competitiveIntent": "unknown",
+      "competitiveState": "Tank Watch",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 28
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 81
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
+      "confidence": "low",
+      "draftIncentive": 81,
+      "evidenceIds": [],
+      "identity": {
+        "abbreviation": "UTA",
+        "city": "Utah",
+        "conference": "West",
+        "division": "Northwest",
+        "name": "Utah Jazz",
+        "slug": "utah-jazz",
+        "teamId": "UTA"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Expected to control 2027 first-round pick; protections unverified in seed data.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "1-9",
+        "last10Losses": 9,
+        "last10Wins": 1
+      },
+      "record": {
+        "losses": 65,
+        "wins": 17
+      },
+      "scoreBand": "Tank Watch",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "High draft incentive and development-focused roster; live deployment evidence unavailable in the offseason. Historical league action is context only — not fabricated seed evidence.",
+      "tankScore": 72,
+      "teamId": "UTA",
+      "teamStrength": 28,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
+    },
+    {
+      "competitiveIntent": "unknown",
+      "competitiveState": "Rebuilding",
+      "components": [
+        {
+          "explanation": "Curated offseason roster-strength estimate; not a tanking accusation.",
+          "key": "team_strength",
+          "label": "Team strength",
+          "value": 26
+        },
+        {
+          "explanation": "Curated planning estimate from pick outlook and early 2027 class context.",
+          "key": "draft_incentive",
+          "label": "Draft incentive",
+          "value": 80
+        },
+        {
+          "explanation": "Offseason mode: live deployment signals are unavailable, so intent is marked unknown rather than zero.",
+          "key": "competitive_intent",
+          "label": "Competitive intent",
+          "value": "unknown"
+        }
+      ],
+      "confidence": "low",
+      "draftIncentive": 80,
+      "evidenceIds": [],
+      "identity": {
+        "abbreviation": "WAS",
+        "city": "Washington",
+        "conference": "East",
+        "division": "Southeast",
+        "name": "Washington Wizards",
+        "slug": "washington-wizards",
+        "teamId": "WAS"
+      },
+      "methodologyVersion": "0.1.0",
+      "mode": "offseason",
+      "pickContext": {
+        "ownsPick": true,
+        "protections": null,
+        "sources": [],
+        "summary": "Likely controls lottery-relevant pick; verify before scoring automation.",
+        "verificationDate": "2026-07-16"
+      },
+      "recentForm": {
+        "label": "2-8",
+        "last10Losses": 8,
+        "last10Wins": 2
+      },
+      "record": {
+        "losses": 64,
+        "wins": 18
+      },
+      "scoreBand": "Tank Watch",
+      "scoreDelta7d": "unknown",
+      "season": "2026-27",
+      "sourceRetrievedAt": "2026-07-16T18:11:19.386Z",
+      "stale": false,
+      "summary": "Rebuild / high draft-incentive planning snapshot; confidence low and evidence empty by design.",
+      "tankScore": 70,
+      "teamId": "WAS",
+      "teamStrength": 26,
+      "updatedAt": "2026-07-16T14:00:00.000Z"
     }
-  ],
-  "evidence": [],
-  "overrides": []
+  ]
 }

@@ -17,6 +17,10 @@
     "test:watch": "vitest",
     "validate:data": "tsx scripts/validate-data.ts",
     "generate:seed": "tsx scripts/generate-seed.ts",
+    "generate:public": "tsx scripts/generate-public.ts",
+    "ingest:core": "tsx scripts/ingest-core.ts",
+    "ingest:yunoball": "tsx scripts/ingest-yunoball.ts",
+    "pipeline": "npm run ingest:core && npm run ingest:yunoball && npm run generate:public && npm run validate:data && npm run build",
     "ci": "npm run format:check && npm run lint && npm run typecheck && npm run validate:data && npm run build && npm run test"
   },
   "engines": {

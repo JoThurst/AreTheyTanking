@@ -1,0 +1,109 @@
+name: Data pipeline and deploy
+
+# Scheduled core-stat refresh + static deploy (no app server).
+# Architecture: fixture/optional YunoBall ingest → generate:public (LKG) →
+# validate → build → commit refreshed public data on main → deploy GitHub Pages.
+# Secrets: only GitHub-provided tokens via protected Actions configuration.
+# Future YunoBall DB credentials (if ever enabled) must live in repository Secrets,
+# never in the workflow file or client bundle.
+
+on:
+  schedule:
+    # 12:00 UTC daily during development; adjust for regular-season cadence later.
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+concurrency:
+  # Newer pipeline runs cancel older ones so a stale job cannot overwrite fresher output.
+  group: are-they-tanking-pipeline-deploy
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-data:
+    name: Ingest, generate, validate, build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Ingest core stats (fixture / approved source)
+        run: npm run ingest:core
+
+      - name: Ingest optional YunoBall enrichment
+        run: npm run ingest:yunoball
+
+      - name: Generate public snapshot (last-known-good publish)
+        run: npm run generate:public
+
+      - name: Validate data contracts
+        run: npm run validate:data
+
+      - name: Production build
+        run: npm run build
+
+      - name: Confirm update timestamp in snapshot
+        run: |
+          node <<'EOF'
+          const fs = require('node:fs');
+          const snap = JSON.parse(fs.readFileSync('data/league-snapshot.json', 'utf8'));
+          const status = JSON.parse(fs.readFileSync('data/pipeline-status.json', 'utf8'));
+          if (!snap.meta.lastSuccessfulUpdateAt) {
+            console.error('Missing meta.lastSuccessfulUpdateAt');
+            process.exit(1);
+          }
+          if (status.status !== 'ok' || status.stale) {
+            console.error('pipeline-status not ok', status);
+            process.exit(1);
+          }
+          console.log('update timestamp', snap.meta.lastSuccessfulUpdateAt);
+          console.log('teams', snap.teams.length);
+          EOF
+
+      - name: Commit refreshed public data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/league-snapshot.json data/generation-manifest.json data/pipeline-status.json
+          if git diff --staged --quiet; then
+            echo "No snapshot changes to commit"
+          else
+            git commit -m "chore: refresh public league snapshot [skip ci]"
+            git push
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    name: Deploy GitHub Pages
+    needs: build-data
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

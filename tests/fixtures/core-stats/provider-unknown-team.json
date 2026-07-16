@@ -1,0 +1,17 @@
+{
+  "provider": "mock-bad-map",
+  "season_label": "2025-26",
+  "standings_as_of": "2026-01-15T05:00:00.000Z",
+  "teams": [
+    {
+      "provider_team_key": "NOTATEAM",
+      "wins": 1,
+      "losses": 1,
+      "last_10": "1-1",
+      "net_rating": 0,
+      "conf_rank": 1,
+      "games_played": 2,
+      "next_game": null
+    }
+  ]
+}

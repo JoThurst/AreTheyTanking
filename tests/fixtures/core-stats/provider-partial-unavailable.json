@@ -1,0 +1,27 @@
+{
+  "provider": "mock-partial",
+  "season_label": "2025-26",
+  "standings_as_of": "2026-01-15T05:00:00.000Z",
+  "teams": [
+    {
+      "provider_team_key": "UTA",
+      "wins": 10,
+      "losses": 30,
+      "last_10": "2-8",
+      "net_rating": null,
+      "conf_rank": 14,
+      "games_played": 40,
+      "next_game": "2026-01-16"
+    },
+    {
+      "provider_team_key": "BOS",
+      "wins": null,
+      "losses": null,
+      "last_10": null,
+      "net_rating": null,
+      "conf_rank": null,
+      "games_played": null,
+      "next_game": null
+    }
+  ]
+}

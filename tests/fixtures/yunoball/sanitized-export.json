@@ -1,0 +1,45 @@
+{
+  "exportVersion": "fixture-2026-07-16",
+  "sourceLabel": "yunoball-sanitized",
+  "season": "2025-26",
+  "exportedAt": "2026-07-16T12:00:00.000Z",
+  "asOf": "2026-04-13T04:00:00.000Z",
+  "teams": [
+    {
+      "teamId": "UTA",
+      "gamesPlayed": 82,
+      "wins": 17,
+      "losses": 65,
+      "netRating": -9.8,
+      "offensiveRating": 108.2,
+      "defensiveRating": 118.0,
+      "scheduleFactor": 0.02,
+      "dailyMetricFlags": ["low_net_rating"],
+      "marketContext": {
+        "role": "market_context",
+        "disclaimer": "Market-implied expectations are context only; not proof of competitive intent and not a Tank Score input.",
+        "impliedWinProbability": 0.18,
+        "impliedSpread": 9.5,
+        "asOf": "2026-04-12T23:00:00.000Z"
+      }
+    },
+    {
+      "teamId": "BOS",
+      "gamesPlayed": 82,
+      "wins": 61,
+      "losses": 21,
+      "netRating": 8.4,
+      "offensiveRating": 120.1,
+      "defensiveRating": 111.7,
+      "scheduleFactor": -0.01,
+      "dailyMetricFlags": [],
+      "marketContext": {
+        "role": "market_context",
+        "disclaimer": "Market-implied expectations are context only; not proof of competitive intent and not a Tank Score input.",
+        "impliedWinProbability": 0.72,
+        "impliedSpread": -7.5,
+        "asOf": "2026-04-12T23:00:00.000Z"
+      }
+    }
+  ]
+}

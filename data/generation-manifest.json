@@ -1,0 +1,49 @@
+{
+  "automatedFieldsApplied": [
+    "record",
+    "recentForm",
+    "sourceRetrievedAt"
+  ],
+  "generatedAt": "2026-07-16T18:16:39.947Z",
+  "inputs": {
+    "coreStats": {
+      "asOf": "2026-04-13T04:00:00.000Z",
+      "path": "data/normalized-core-stats.json",
+      "present": true,
+      "season": "2025-26",
+      "sha256": "93bd080044cf9f4c4ef62505e90ea65d6d52cc08c1a354fdadc35b359e435512",
+      "sourceName": "fixture-core-stats:mock-nba-standings"
+    },
+    "editorialSnapshot": {
+      "path": "data/editorial-snapshot.json",
+      "present": true,
+      "sha256": "7dbe5227c958c6d337806b44c2316bb75eb27b43d12b4b81048e3d4e7ce262a5"
+    },
+    "yunoballEnrichment": {
+      "exportVersion": null,
+      "path": "data/yunoball-enrichment.json",
+      "present": true,
+      "sha256": "c377e034da817228c0e84f35d7a7ac0c010495e753e287125399ec9d2fe0cd8c",
+      "status": "skipped"
+    }
+  },
+  "methodologyVersion": "0.1.0",
+  "protectedEditorialFields": [
+    "competitiveState",
+    "summary",
+    "tankScore",
+    "scoreBand",
+    "confidence",
+    "teamStrength",
+    "draftIncentive",
+    "competitiveIntent",
+    "components",
+    "pickContext",
+    "evidenceIds",
+    "identity",
+    "mode",
+    "season",
+    "methodologyVersion"
+  ],
+  "teamCount": 30
+}
