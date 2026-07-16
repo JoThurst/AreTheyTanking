@@ -8,9 +8,14 @@ import { readFile, access } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { LeagueSnapshotSchema } from "../src/schemas";
+import { GenerationManifestSchema } from "../src/pipeline/generationManifest";
+import { PipelineStatusSchema } from "../src/pipeline/pipelineStatus";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const snapshotPath = path.join(root, "data", "league-snapshot.json");
+const editorialPath = path.join(root, "data", "editorial-snapshot.json");
+const manifestPath = path.join(root, "data", "generation-manifest.json");
+const pipelineStatusPath = path.join(root, "data", "pipeline-status.json");
 
 async function exists(filePath: string): Promise<boolean> {
   try {
@@ -21,6 +26,19 @@ async function exists(filePath: string): Promise<boolean> {
   }
 }
 
+async function validateSnapshot(label: string, filePath: string): Promise<void> {
+  const raw = JSON.parse(await readFile(filePath, "utf8")) as unknown;
+  const result = LeagueSnapshotSchema.safeParse(raw);
+  if (!result.success) {
+    console.error(`validate:data FAILED — ${label}`);
+    console.error(JSON.stringify(result.error.issues, null, 2));
+    process.exit(1);
+  }
+  console.log(
+    `validate:data OK — ${label}: ${result.data.teams.length} teams, methodology ${result.data.meta.methodologyVersion}`,
+  );
+}
+
 async function main(): Promise<void> {
   if (!(await exists(snapshotPath))) {
     console.log(
@@ -29,17 +47,37 @@ async function main(): Promise<void> {
     return;
   }
 
-  const raw = JSON.parse(await readFile(snapshotPath, "utf8")) as unknown;
-  const result = LeagueSnapshotSchema.safeParse(raw);
-  if (!result.success) {
-    console.error("validate:data FAILED");
-    console.error(JSON.stringify(result.error.issues, null, 2));
-    process.exit(1);
+  await validateSnapshot("league-snapshot", snapshotPath);
+
+  if (await exists(editorialPath)) {
+    await validateSnapshot("editorial-snapshot", editorialPath);
   }
 
-  console.log(
-    `validate:data OK — ${result.data.teams.length} teams, methodology ${result.data.meta.methodologyVersion}`,
-  );
+  if (await exists(manifestPath)) {
+    const raw = JSON.parse(await readFile(manifestPath, "utf8")) as unknown;
+    const result = GenerationManifestSchema.safeParse(raw);
+    if (!result.success) {
+      console.error("validate:data FAILED — generation-manifest");
+      console.error(JSON.stringify(result.error.issues, null, 2));
+      process.exit(1);
+    }
+    console.log(
+      `validate:data OK — generation-manifest: methodology ${result.data.methodologyVersion}`,
+    );
+  }
+
+  if (await exists(pipelineStatusPath)) {
+    const raw = JSON.parse(await readFile(pipelineStatusPath, "utf8")) as unknown;
+    const result = PipelineStatusSchema.safeParse(raw);
+    if (!result.success) {
+      console.error("validate:data FAILED — pipeline-status");
+      console.error(JSON.stringify(result.error.issues, null, 2));
+      process.exit(1);
+    }
+    console.log(
+      `validate:data OK — pipeline-status: ${result.data.status} stale=${result.data.stale}`,
+    );
+  }
 }
 
 main().catch((error: unknown) => {

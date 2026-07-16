@@ -30,3 +30,9 @@ __pycache__/
 # Logs
 *.log
 npm-debug.log*
+
+# Pipeline raw cache (committed .gitignore under data/cache keeps the folder)
+data/cache/raw/
+data/normalized-core-stats.json
+data/yunoball-enrichment.json
+data/staging/

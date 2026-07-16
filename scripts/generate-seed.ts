@@ -7,6 +7,7 @@ import { LeagueSnapshotSchema, type LeagueSnapshot, type TeamSummary } from "../
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const outPath = path.join(root, "data", "league-snapshot.json");
+const editorialPath = path.join(root, "data", "editorial-snapshot.json");
 
 const NOW = "2026-07-16T14:00:00.000Z";
 const METHODOLOGY_VERSION = "0.1.0";
@@ -115,8 +116,10 @@ async function main(): Promise<void> {
     process.exit(1);
   }
 
-  await writeFile(outPath, `${JSON.stringify(parsed.data, null, 2)}\n`, "utf8");
-  console.log(`Wrote ${outPath} (${parsed.data.teams.length} teams)`);
+  const body = `${JSON.stringify(parsed.data, null, 2)}\n`;
+  await writeFile(editorialPath, body, "utf8");
+  await writeFile(outPath, body, "utf8");
+  console.log(`Wrote ${editorialPath} and ${outPath} (${parsed.data.teams.length} teams)`);
 }
 
 main().catch((error: unknown) => {
