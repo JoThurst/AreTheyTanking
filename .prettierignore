@@ -5,3 +5,11 @@ coverage
 package-lock.json
 *.md
 !README.md
+
+# Machine-generated / pipeline outputs (stableStringify; not hand-formatted)
+data/generation-manifest.json
+data/league-snapshot.json
+data/pipeline-status.json
+data/normalized-core-stats.json
+data/yunoball-enrichment.json
+data/staging/
