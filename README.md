@@ -19,7 +19,7 @@ This repository is a static Astro site fed by curated/generated JSON. Browsers n
 
 ## Prerequisites
 
-- Node.js 20+
+- Node.js 22.12+
 
 ## Local commands
 
