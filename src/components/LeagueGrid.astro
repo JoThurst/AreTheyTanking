@@ -1,0 +1,62 @@
+---
+import TeamCard from "./TeamCard.astro";
+import type { TeamSummary } from "../schemas";
+
+interface Props {
+  teams: TeamSummary[];
+}
+
+const { teams } = Astro.props;
+---
+
+<section class="league-grid" aria-labelledby="league-grid-heading">
+  <div class="league-grid__header">
+    <h2 id="league-grid-heading">All 30 teams</h2>
+    <p class="league-grid__count" data-results-count>
+      Showing <strong>{teams.length}</strong> teams
+    </p>
+  </div>
+  <div class="league-grid__list" data-league-grid>
+    {teams.map((team) => <TeamCard team={team} />)}
+  </div>
+</section>
+
+<style>
+  .league-grid__header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-4);
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: var(--space-4);
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+
+  .league-grid__count {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+  }
+
+  .league-grid__list {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .league-grid__list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .league-grid__list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+</style>

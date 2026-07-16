@@ -1,0 +1,94 @@
+---
+import type { TeamSummary } from "../schemas";
+import { formatUpdatedAt } from "../lib/format";
+
+interface Props {
+  team: TeamSummary;
+}
+
+const { team } = Astro.props;
+const pick = team.pickContext;
+---
+
+<section class="pick-context" aria-labelledby="pick-heading">
+  <h2 id="pick-heading">Pick context</h2>
+  {
+    pick ? (
+      <>
+        <p>{pick.summary}</p>
+        <dl>
+          <div>
+            <dt>Owns pick benefit</dt>
+            <dd>
+              {pick.ownsPick === null ? "unknown" : pick.ownsPick ? "Likely yes" : "Likely no"}
+            </dd>
+          </div>
+          <div>
+            <dt>Protections</dt>
+            <dd>{pick.protections ?? "unknown"}</dd>
+          </div>
+          <div>
+            <dt>Verification date</dt>
+            <dd>{pick.verificationDate}</dd>
+          </div>
+        </dl>
+      </>
+    ) : (
+      <p>Pick context is unknown for this team.</p>
+    )
+  }
+  <p class="pick-context__note">
+    Methodology version {team.methodologyVersion}. Seed pick data is curated planning input, not a
+    live transaction feed. Reviewed as of {formatUpdatedAt(team.updatedAt)}.
+  </p>
+</section>
+
+<style>
+  .pick-context {
+    margin-bottom: var(--space-6);
+    padding: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-elevated);
+  }
+
+  h2 {
+    margin: 0 0 var(--space-3);
+    font-size: 1.25rem;
+  }
+
+  p {
+    margin: 0 0 var(--space-3);
+    color: var(--color-text-secondary);
+  }
+
+  dl {
+    display: grid;
+    gap: var(--space-3);
+    margin: 0 0 var(--space-3);
+  }
+
+  dt {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-muted);
+  }
+
+  dd {
+    margin: 0.15rem 0 0;
+    font-weight: 600;
+  }
+
+  .pick-context__note {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--color-muted);
+  }
+
+  @media (min-width: 720px) {
+    dl {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+</style>

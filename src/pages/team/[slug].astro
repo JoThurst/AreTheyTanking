@@ -1,0 +1,119 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import StatusChip from "../../components/StatusChip.astro";
+import ModeBanner from "../../components/ModeBanner.astro";
+import TeamMeasures from "../../components/TeamMeasures.astro";
+import PickContext from "../../components/PickContext.astro";
+import { getAllTeams } from "../../lib/loadSnapshot";
+import { formatScore, formatUpdatedAt } from "../../lib/format";
+
+export function getStaticPaths() {
+  return getAllTeams().map((team) => ({
+    params: { slug: team.identity.slug },
+    props: { team },
+  }));
+}
+
+const { team } = Astro.props;
+---
+
+<PageLayout
+  title={`${team.identity.name} — Are They Tanking?`}
+  description={team.summary}
+  current="home"
+>
+  <p class="back"><a href="/">← League</a></p>
+  <ModeBanner mode={team.mode} />
+
+  <header class="team-hero">
+    <p class="eyebrow">
+      {team.identity.abbreviation} · {team.identity.conference} · {team.competitiveState}
+    </p>
+    <h1>{team.identity.name}</h1>
+    <p class="lede">{team.summary}</p>
+    <div class="team-hero__chips">
+      <StatusChip
+        label="Tank Score"
+        value={formatScore(team.tankScore)}
+        kind="tank"
+        band={team.scoreBand}
+      />
+      <StatusChip label="Confidence" value={team.confidence} kind="confidence" />
+      <StatusChip label="Team strength" value={formatScore(team.teamStrength)} kind="strength" />
+    </div>
+    <p class="team-hero__meta">
+      Updated {formatUpdatedAt(team.updatedAt)} · <a href="/methodology/">Methodology</a>
+    </p>
+  </header>
+
+  <TeamMeasures team={team} />
+  <PickContext team={team} />
+
+  <section class="evidence" aria-labelledby="evidence-heading">
+    <h2 id="evidence-heading">Evidence</h2>
+    <p>
+      No accepted evidence items in this seed dataset. Evidence timelines are populated after
+      research review (Sprint 4). Empty is intentional — we do not fabricate scoring evidence.
+    </p>
+  </section>
+</PageLayout>
+
+<style>
+  .back {
+    margin: 0 0 var(--space-4);
+  }
+
+  .back a {
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .eyebrow {
+    margin: 0 0 var(--space-2);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  h1 {
+    margin: 0 0 var(--space-3);
+    font-size: clamp(1.75rem, 5vw, 2.75rem);
+    line-height: 1.1;
+  }
+
+  .lede {
+    margin: 0 0 var(--space-4);
+    max-width: 42rem;
+    color: var(--color-text-secondary);
+  }
+
+  .team-hero__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+  }
+
+  .team-hero__meta {
+    margin: 0 0 var(--space-5);
+    font-size: 0.9rem;
+    color: var(--color-muted);
+  }
+
+  .evidence {
+    padding: var(--space-4);
+    border: 1px dashed var(--color-border-strong);
+    border-radius: var(--radius-md);
+  }
+
+  .evidence h2 {
+    margin: 0 0 var(--space-2);
+    font-size: 1.2rem;
+  }
+
+  .evidence p {
+    margin: 0;
+    color: var(--color-text-secondary);
+  }
+</style>

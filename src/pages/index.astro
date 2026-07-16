@@ -1,0 +1,73 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import DraftClassBanner from "../components/DraftClassBanner.astro";
+import LeagueControls from "../components/LeagueControls.astro";
+import LeagueGrid from "../components/LeagueGrid.astro";
+import ModeBanner from "../components/ModeBanner.astro";
+import StaleBanner from "../components/StaleBanner.astro";
+import { METHODOLOGY } from "../../content/methodology";
+import { loadLeagueSnapshot } from "../lib/loadSnapshot";
+import { applyLeagueFilters, DEFAULT_FILTERS } from "../lib/leagueFilters";
+
+const snapshot = loadLeagueSnapshot();
+const teams = applyLeagueFilters(snapshot.teams, DEFAULT_FILTERS);
+---
+
+<PageLayout title="Are They Tanking? — League" current="home">
+  <ModeBanner mode={snapshot.meta.mode} />
+  <StaleBanner meta={snapshot.meta} />
+
+  <section class="hero">
+    <p class="eyebrow">{snapshot.meta.season} Competitive Outlook</p>
+    <h1>Are They Tanking?</h1>
+    <p class="lede">
+      {METHODOLOGY.tagline} Scan Tank Score separately from team strength — a weak roster that is still
+      competing should not look like a tanker.
+    </p>
+    <p class="hero__method">
+      <a href="/methodology/">Read the methodology</a>
+      · Score version {METHODOLOGY.version}
+    </p>
+  </section>
+
+  <DraftClassBanner
+    assessment={snapshot.meta.draftAssessment}
+    mode={snapshot.meta.mode}
+    season={snapshot.meta.season}
+  />
+
+  <LeagueControls />
+  <LeagueGrid teams={teams} />
+</PageLayout>
+
+<style>
+  .hero {
+    margin-bottom: var(--space-5);
+  }
+
+  .eyebrow {
+    margin: 0 0 var(--space-2);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  h1 {
+    margin: 0 0 var(--space-3);
+    font-size: clamp(2rem, 6vw, 3.25rem);
+    line-height: 1.05;
+  }
+
+  .lede {
+    margin: 0 0 var(--space-3);
+    max-width: 40rem;
+    color: var(--color-text-secondary);
+    font-size: 1.05rem;
+  }
+
+  .hero__method {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+</style>

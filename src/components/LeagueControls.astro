@@ -1,0 +1,277 @@
+---
+import type { CompetitiveState } from "../schemas";
+
+const states: CompetitiveState[] = [
+  "Contender",
+  "Playoff Push",
+  "Play-In Fight",
+  "Crossroads",
+  "Development Season",
+  "Rebuilding",
+  "Tank Watch",
+  "Confirmed League Action",
+];
+---
+
+<form class="league-controls" data-league-controls aria-label="Sort and filter teams">
+  <div class="league-controls__fields">
+    <label>
+      Sort by
+      <select name="sort" data-filter="sort">
+        <option value="tankScore">Tank Score</option>
+        <option value="change">Score change</option>
+        <option value="record">Record</option>
+        <option value="form">Recent form</option>
+        <option value="confidence">Confidence</option>
+      </select>
+    </label>
+
+    <label>
+      Conference
+      <select name="conference" data-filter="conference">
+        <option value="all">All</option>
+        <option value="East">East</option>
+        <option value="West">West</option>
+      </select>
+    </label>
+
+    <label>
+      Competitive state
+      <select name="state" data-filter="state">
+        <option value="all">All</option>
+        {states.map((state) => <option value={state}>{state}</option>)}
+      </select>
+    </label>
+
+    <label>
+      Confidence
+      <select name="confidence" data-filter="confidence">
+        <option value="all">All</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="league-controls__actions">
+    <button type="button" data-reset-filters>Reset filters</button>
+    <p class="league-controls__hint" data-results-count></p>
+  </div>
+
+  <p class="league-controls__empty" data-empty-state hidden>
+    No teams match these filters.
+    <button type="button" data-reset-filters>Reset filters</button>
+    to show all 30 teams.
+  </p>
+</form>
+
+<script>
+  import {
+    DEFAULT_FILTERS,
+    filtersToSearch,
+    parseFiltersFromSearch,
+    type LeagueFilters,
+  } from "../lib/leagueFilters";
+
+  function readFilters(form: HTMLFormElement): LeagueFilters {
+    const data = new FormData(form);
+    return {
+      sort: (data.get("sort") as LeagueFilters["sort"]) || DEFAULT_FILTERS.sort,
+      conference:
+        (data.get("conference") as LeagueFilters["conference"]) || DEFAULT_FILTERS.conference,
+      state: (data.get("state") as LeagueFilters["state"]) || DEFAULT_FILTERS.state,
+      confidence:
+        (data.get("confidence") as LeagueFilters["confidence"]) || DEFAULT_FILTERS.confidence,
+    };
+  }
+
+  function writeFilters(form: HTMLFormElement, filters: LeagueFilters): void {
+    const sort = form.elements.namedItem("sort");
+    const conference = form.elements.namedItem("conference");
+    const state = form.elements.namedItem("state");
+    const confidence = form.elements.namedItem("confidence");
+    if (sort instanceof HTMLSelectElement) sort.value = filters.sort;
+    if (conference instanceof HTMLSelectElement) conference.value = filters.conference;
+    if (state instanceof HTMLSelectElement) state.value = filters.state;
+    if (confidence instanceof HTMLSelectElement) confidence.value = filters.confidence;
+  }
+
+  function applyDomFilters(filters: LeagueFilters): void {
+    const grid = document.querySelector<HTMLElement>("[data-league-grid]");
+    const empty = document.querySelector<HTMLElement>("[data-empty-state]");
+    const counts = document.querySelectorAll("[data-results-count]");
+    if (!grid) return;
+
+    const cards = Array.from(grid.querySelectorAll<HTMLElement>(".team-card"));
+
+    const visible = cards.filter((card) => {
+      const conferenceOk =
+        filters.conference === "all" || card.dataset.conference === filters.conference;
+      const stateOk = filters.state === "all" || card.dataset.state === filters.state;
+      const confidenceOk =
+        filters.confidence === "all" || card.dataset.confidence === filters.confidence;
+      const show = conferenceOk && stateOk && confidenceOk;
+      card.hidden = !show;
+      return show;
+    });
+
+    visible.sort((a, b) => {
+      const nameA = a.querySelector(".team-card__name")?.textContent ?? "";
+      const nameB = b.querySelector(".team-card__name")?.textContent ?? "";
+
+      const num = (value: string | undefined, unknownAs: number): number => {
+        if (value === undefined || value === "unknown") return unknownAs;
+        return Number(value);
+      };
+
+      if (filters.sort === "tankScore") {
+        const diff = num(b.dataset.tankScore, -1) - num(a.dataset.tankScore, -1);
+        if (diff !== 0) return diff;
+      } else if (filters.sort === "change") {
+        const diff =
+          num(b.dataset.delta, Number.NEGATIVE_INFINITY) -
+          num(a.dataset.delta, Number.NEGATIVE_INFINITY);
+        if (diff !== 0) return diff;
+      } else if (filters.sort === "record") {
+        const pct = (card: HTMLElement): number => {
+          const wins = num(card.dataset.wins, 0);
+          const losses = num(card.dataset.losses, 0);
+          const total = wins + losses;
+          return total === 0 ? -1 : wins / total;
+        };
+        const diff = pct(b) - pct(a);
+        if (diff !== 0) return diff;
+        const winDiff = num(b.dataset.wins, 0) - num(a.dataset.wins, 0);
+        if (winDiff !== 0) return winDiff;
+      } else if (filters.sort === "form") {
+        const diff = num(b.dataset.form, -1) - num(a.dataset.form, -1);
+        if (diff !== 0) return diff;
+      } else if (filters.sort === "confidence") {
+        const rank = { low: 0, medium: 1, high: 2 } as const;
+        const ca = rank[(a.dataset.confidence as keyof typeof rank) ?? "low"] ?? 0;
+        const cb = rank[(b.dataset.confidence as keyof typeof rank) ?? "low"] ?? 0;
+        if (cb !== ca) return cb - ca;
+      }
+
+      return nameA.localeCompare(nameB);
+    });
+
+    for (const card of visible) {
+      grid.appendChild(card);
+    }
+
+    for (const count of counts) {
+      count.innerHTML = `Showing <strong>${visible.length}</strong> of ${cards.length} teams`;
+    }
+
+    if (empty) {
+      empty.hidden = visible.length > 0;
+    }
+  }
+
+  function syncUrl(filters: LeagueFilters): void {
+    const next = `${window.location.pathname}${filtersToSearch(filters)}`;
+    window.history.replaceState({}, "", next);
+  }
+
+  function init(): void {
+    const form = document.querySelector<HTMLFormElement>("[data-league-controls]");
+    if (!form) return;
+
+    const initial = parseFiltersFromSearch(window.location.search);
+    writeFilters(form, initial);
+    applyDomFilters(initial);
+
+    form.addEventListener("change", () => {
+      const filters = readFilters(form);
+      applyDomFilters(filters);
+      syncUrl(filters);
+    });
+
+    form.querySelectorAll("[data-reset-filters]").forEach((button) => {
+      button.addEventListener("click", () => {
+        writeFilters(form, DEFAULT_FILTERS);
+        applyDomFilters(DEFAULT_FILTERS);
+        syncUrl(DEFAULT_FILTERS);
+      });
+    });
+  }
+
+  init();
+  document.addEventListener("astro:page-load", init);
+</script>
+
+<style>
+  .league-controls {
+    margin-bottom: var(--space-5);
+    padding: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-elevated);
+  }
+
+  .league-controls__fields {
+    display: grid;
+    gap: var(--space-3);
+    grid-template-columns: 1fr;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+  }
+
+  select,
+  button {
+    font: inherit;
+    color: var(--color-text);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    padding: 0.45rem 0.55rem;
+  }
+
+  button {
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .league-controls__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    align-items: center;
+    margin-top: var(--space-4);
+  }
+
+  .league-controls__hint {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+  }
+
+  .league-controls__empty {
+    margin: var(--space-4) 0 0;
+    padding: var(--space-3);
+    background: var(--color-warning-bg);
+    color: var(--color-warning);
+    border-radius: var(--radius-sm);
+  }
+
+  @media (min-width: 720px) {
+    .league-controls__fields {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .league-controls__fields {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+</style>

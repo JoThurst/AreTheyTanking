@@ -1,0 +1,96 @@
+---
+interface Props {
+  label: string;
+  value: string | number;
+  kind?: "tank" | "strength" | "neutral" | "confidence";
+  band?: string;
+}
+
+const { label, value, kind = "neutral", band } = Astro.props;
+const bandClass =
+  band === "Full Competition"
+    ? "band-full"
+    : band === "Competitive"
+      ? "band-competitive"
+      : band === "Direction Unclear"
+        ? "band-unclear"
+        : band === "Tank Watch"
+          ? "band-watch"
+          : band === "Strong Tank Signal"
+            ? "band-strong"
+            : "";
+---
+
+<span class:list={["status-chip", kind, bandClass]}>
+  <span class="status-chip__label">{label}</span>
+  <span class="status-chip__value">{value}</span>
+  {band ? <span class="status-chip__band">{band}</span> : null}
+</span>
+
+<style>
+  .status-chip {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.5rem;
+    padding: 0.35rem 0.55rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-bg-elevated);
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+
+  .status-chip__label {
+    color: var(--color-muted);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .status-chip__value {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .status-chip__band {
+    width: 100%;
+    font-size: 0.78rem;
+    color: var(--color-text-secondary);
+  }
+
+  .status-chip.strength {
+    background: var(--strength);
+    color: var(--strength-fg);
+    border-color: color-mix(in srgb, var(--strength-fg) 25%, transparent);
+  }
+
+  .status-chip.band-full {
+    background: var(--band-full);
+    color: var(--band-full-fg);
+  }
+
+  .status-chip.band-competitive {
+    background: var(--band-competitive);
+    color: var(--band-competitive-fg);
+  }
+
+  .status-chip.band-unclear {
+    background: var(--band-unclear);
+    color: var(--band-unclear-fg);
+  }
+
+  .status-chip.band-watch {
+    background: var(--band-watch);
+    color: var(--band-watch-fg);
+  }
+
+  .status-chip.band-strong {
+    background: var(--band-strong);
+    color: var(--band-strong-fg);
+  }
+
+  .status-chip.confidence {
+    background: var(--color-bg-muted);
+  }
+</style>

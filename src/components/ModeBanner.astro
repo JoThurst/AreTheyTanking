@@ -1,0 +1,27 @@
+---
+interface Props {
+  mode: string;
+}
+
+const { mode } = Astro.props;
+---
+
+{
+  mode === "offseason" ? (
+    <aside class="mode-banner" role="status">
+      <strong>Offseason mode.</strong> Live deployment signals are unavailable. Competitive intent
+      is marked unknown rather than inferred from record.
+    </aside>
+  ) : null
+}
+
+<style>
+  .mode-banner {
+    margin-bottom: var(--space-4);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-sm);
+    background: var(--color-warning-bg);
+    color: var(--color-warning);
+    font-size: 0.95rem;
+  }
+</style>

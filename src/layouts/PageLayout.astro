@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+  current?: "home" | "methodology";
+}
+
+const { title, description, current = "home" } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <SiteHeader current={current} />
+  <main class="page-shell">
+    <slot />
+  </main>
+  <footer class="site-footer">
+    <p>Independent analysis. Not affiliated with the NBA or any team.</p>
+  </footer>
+</BaseLayout>
+
+<style>
+  .page-shell {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: var(--space-5) var(--space-4) var(--space-7);
+  }
+
+  .site-footer {
+    border-top: 1px solid var(--color-border);
+    padding: var(--space-4);
+    text-align: center;
+    color: var(--color-muted);
+    font-size: 0.8rem;
+  }
+
+  .site-footer p {
+    margin: 0;
+  }
+</style>

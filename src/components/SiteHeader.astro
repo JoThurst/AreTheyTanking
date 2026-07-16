@@ -1,0 +1,91 @@
+---
+import { METHODOLOGY } from "../../content/methodology";
+
+interface Props {
+  current?: "home" | "methodology";
+}
+
+const { current = "home" } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="/">
+      <span class="site-header__mark">Are They Tanking?</span>
+      <span class="site-header__tag">Independent competitive outlook</span>
+    </a>
+    <nav class="site-header__nav" aria-label="Primary">
+      <a href="/" aria-current={current === "home" ? "page" : undefined}>League</a>
+      <a href="/methodology" aria-current={current === "methodology" ? "page" : undefined}
+        >Methodology</a
+      >
+    </nav>
+  </div>
+  <p class="site-header__notice">{METHODOLOGY.nonAffiliation}</p>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid var(--color-border);
+    background: color-mix(in srgb, var(--color-bg-elevated) 92%, transparent);
+    backdrop-filter: blur(6px);
+  }
+
+  .site-header__inner {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: var(--space-3) var(--space-4);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .site-header__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    text-decoration: none;
+    color: inherit;
+    min-width: 0;
+  }
+
+  .site-header__mark {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 3vw, 1.65rem);
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  .site-header__tag {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+  }
+
+  .site-header__nav {
+    display: flex;
+    gap: var(--space-4);
+  }
+
+  .site-header__nav a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .site-header__nav a[aria-current="page"] {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .site-header__notice {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: 0 var(--space-4) var(--space-3);
+    font-size: 0.75rem;
+    color: var(--color-muted);
+    line-height: 1.4;
+  }
+</style>

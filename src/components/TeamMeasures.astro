@@ -1,0 +1,99 @@
+---
+import StatusChip from "./StatusChip.astro";
+import type { TeamSummary } from "../schemas";
+import { formatScore, formatUpdatedAt } from "../lib/format";
+
+interface Props {
+  team: TeamSummary;
+}
+
+const { team } = Astro.props;
+---
+
+<section class="measures" aria-labelledby="measures-heading">
+  <h2 id="measures-heading">Three measures</h2>
+  <p class="measures__intro">
+    Team strength is not an accusation. Draft incentive and competitive intent are shown separately
+    so a bad team that is still trying can be identified.
+  </p>
+  <div class="measures__grid">
+    <article>
+      <StatusChip label="Team strength" value={formatScore(team.teamStrength)} kind="strength" />
+      <p>
+        {
+          team.components.find((c) => c.key === "team_strength")?.explanation ??
+            "Team strength explanation unavailable."
+        }
+      </p>
+    </article>
+    <article>
+      <StatusChip label="Draft incentive" value={formatScore(team.draftIncentive)} kind="neutral" />
+      <p>
+        {
+          team.components.find((c) => c.key === "draft_incentive")?.explanation ??
+            "Draft incentive explanation unavailable."
+        }
+      </p>
+    </article>
+    <article>
+      <StatusChip
+        label="Competitive intent"
+        value={formatScore(team.competitiveIntent)}
+        kind="neutral"
+      />
+      <p>
+        {
+          team.components.find((c) => c.key === "competitive_intent")?.explanation ??
+            "Competitive intent explanation unavailable."
+        }
+      </p>
+    </article>
+  </div>
+  <p class="measures__updated">Updated {formatUpdatedAt(team.updatedAt)} · mode {team.mode}</p>
+</section>
+
+<style>
+  .measures {
+    margin-bottom: var(--space-6);
+  }
+
+  h2 {
+    margin: 0 0 var(--space-2);
+    font-size: 1.35rem;
+  }
+
+  .measures__intro {
+    margin: 0 0 var(--space-4);
+    max-width: 42rem;
+    color: var(--color-text-secondary);
+  }
+
+  .measures__grid {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  article {
+    padding: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-elevated);
+  }
+
+  article p {
+    margin: var(--space-3) 0 0;
+    color: var(--color-text-secondary);
+  }
+
+  .measures__updated {
+    margin: var(--space-3) 0 0;
+    font-size: 0.85rem;
+    color: var(--color-muted);
+  }
+
+  @media (min-width: 900px) {
+    .measures__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+</style>

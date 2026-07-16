@@ -1,0 +1,34 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+---
+
+<PageLayout title="Page not found — Are They Tanking?" current="home">
+  <section class="not-found">
+    <h1>Team or page not found</h1>
+    <p>
+      That route is not in the current dataset. League pages use stable team slugs from the curated
+      snapshot.
+    </p>
+    <p>
+      <a href="/">Return to the league grid</a>
+      ·
+      <a href="/methodology/">Methodology</a>
+    </p>
+  </section>
+</PageLayout>
+
+<style>
+  .not-found {
+    max-width: 36rem;
+  }
+
+  h1 {
+    margin: 0 0 var(--space-3);
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  p {
+    margin: 0 0 var(--space-3);
+    color: var(--color-text-secondary);
+  }
+</style>

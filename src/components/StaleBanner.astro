@@ -1,0 +1,30 @@
+---
+import type { LeagueSnapshotMeta } from "../schemas";
+import { formatUpdatedAt } from "../lib/format";
+
+interface Props {
+  meta: LeagueSnapshotMeta;
+}
+
+const { meta } = Astro.props;
+---
+
+{
+  meta.stale ? (
+    <aside class="stale-banner" role="status">
+      <strong>Stale data.</strong> Showing last-known-good snapshot. Last successful update:{" "}
+      {formatUpdatedAt(meta.lastSuccessfulUpdateAt)}. Generated {formatUpdatedAt(meta.generatedAt)}.
+    </aside>
+  ) : null
+}
+
+<style>
+  .stale-banner {
+    margin-bottom: var(--space-4);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-sm);
+    background: var(--color-danger-bg);
+    color: var(--color-danger);
+    font-size: 0.95rem;
+  }
+</style>

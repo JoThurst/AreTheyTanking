@@ -1,0 +1,52 @@
+:root {
+  /* Typography */
+  --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Surfaces — restrained paper/forest analytics (not NBA-branded) */
+  --color-bg: #ebe6da;
+  --color-bg-elevated: #fffdf8;
+  --color-bg-muted: #e0dbc8;
+  --color-text: #1a221a;
+  --color-text-secondary: #445044;
+  --color-muted: #667066;
+  --color-border: #cfc8b8;
+  --color-border-strong: #9a9486;
+  --color-focus: #0b4f42;
+  --color-accent: #0b4f42;
+  --color-accent-soft: #d7ebe4;
+  --color-warning: #7a4e00;
+  --color-warning-bg: #f3e4c4;
+  --color-danger: #7a2430;
+  --color-danger-bg: #f3d6da;
+
+  /* Score bands — always paired with text labels in UI */
+  --band-full: #d7ebe4;
+  --band-full-fg: #0b4f42;
+  --band-competitive: #d9e4f2;
+  --band-competitive-fg: #1c3f6e;
+  --band-unclear: #efe6c8;
+  --band-unclear-fg: #5c4a12;
+  --band-watch: #f0d9c8;
+  --band-watch-fg: #6b3210;
+  --band-strong: #f0d0d4;
+  --band-strong-fg: #6b1c28;
+
+  /* Team strength — visually distinct from tank bands */
+  --strength: #e4e0f2;
+  --strength-fg: #3a2f6b;
+
+  /* Spacing / radius */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.4rem;
+  --page-max: 72rem;
+  --header-height: 3.5rem;
+}

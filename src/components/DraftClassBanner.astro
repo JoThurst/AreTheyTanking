@@ -1,0 +1,118 @@
+---
+import type { DraftClassAssessment, OperatingMode } from "../schemas";
+import { formatScore, formatUpdatedAt } from "../lib/format";
+
+interface Props {
+  assessment: DraftClassAssessment | null;
+  mode: OperatingMode;
+  season: string;
+}
+
+const { assessment, mode, season } = Astro.props;
+const modeLabel =
+  mode === "offseason"
+    ? "Offseason competitive outlook"
+    : mode === "late_season"
+      ? "Late-season monitoring"
+      : "Regular season";
+---
+
+<section class="draft-banner" aria-labelledby="draft-banner-heading">
+  <div class="draft-banner__top">
+    <p class="draft-banner__mode">{season} · {modeLabel}</p>
+    <h2 id="draft-banner-heading">Draft incentive context</h2>
+  </div>
+  {
+    assessment ? (
+      <>
+        <p class="draft-banner__summary">{assessment.summary}</p>
+        <dl class="draft-banner__facts">
+          <div>
+            <dt>Draft year</dt>
+            <dd>{assessment.draftYear}</dd>
+          </div>
+          <div>
+            <dt>Class index</dt>
+            <dd>
+              {formatScore(assessment.indexScore)}
+              <span class="draft-banner__conf">({assessment.confidence} confidence)</span>
+            </dd>
+          </div>
+          <div>
+            <dt>Lottery rules</dt>
+            <dd>{assessment.lotteryRuleMode}</dd>
+          </div>
+          <div>
+            <dt>Reviewed</dt>
+            <dd>{formatUpdatedAt(assessment.reviewedAt)}</dd>
+          </div>
+        </dl>
+      </>
+    ) : (
+      <p class="draft-banner__summary">Draft-class assessment is not available in this snapshot.</p>
+    )
+  }
+</section>
+
+<style>
+  .draft-banner {
+    padding: var(--space-5);
+    margin-bottom: var(--space-5);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-accent);
+    border-radius: var(--radius-md);
+    background: color-mix(in srgb, var(--color-accent-soft) 55%, var(--color-bg-elevated));
+  }
+
+  .draft-banner__mode {
+    margin: 0 0 var(--space-1);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  h2 {
+    margin: 0 0 var(--space-3);
+    font-size: 1.35rem;
+  }
+
+  .draft-banner__summary {
+    margin: 0 0 var(--space-4);
+    max-width: 48rem;
+    color: var(--color-text-secondary);
+  }
+
+  .draft-banner__facts {
+    display: grid;
+    gap: var(--space-3);
+    margin: 0;
+  }
+
+  .draft-banner__facts div {
+    min-width: 0;
+  }
+
+  .draft-banner__facts dt {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-muted);
+  }
+
+  .draft-banner__facts dd {
+    margin: 0.15rem 0 0;
+    font-weight: 600;
+  }
+
+  .draft-banner__conf {
+    font-weight: 500;
+    color: var(--color-text-secondary);
+  }
+
+  @media (min-width: 720px) {
+    .draft-banner__facts {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+</style>

@@ -1,0 +1,248 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { METHODOLOGY } from "../../content/methodology";
+---
+
+<PageLayout
+  title="Methodology — Are They Tanking?"
+  description="How Tank Score, evidence tiers, and injury guardrails work."
+  current="methodology"
+>
+  <header class="method-hero">
+    <p class="eyebrow">Version {METHODOLOGY.version}</p>
+    <h1>{METHODOLOGY.title}</h1>
+    <p class="lede">
+      <strong>{METHODOLOGY.tagline}</strong>
+      {METHODOLOGY.principles[0].body}
+    </p>
+  </header>
+
+  <section aria-labelledby="principles-heading">
+    <h2 id="principles-heading">Principles</h2>
+    <ul>
+      {
+        METHODOLOGY.principles.map((principle) => (
+          <li>
+            <strong>{principle.title}.</strong> {principle.body}
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section aria-labelledby="bands-heading">
+    <h2 id="bands-heading">Score bands</h2>
+    <p>{METHODOLOGY.formulaVersionNote}</p>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Score</th>
+          <th scope="col">Label</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          METHODOLOGY.scoreBands.map((band) => (
+            <tr>
+              <td>
+                {band.min}–{band.max}
+              </td>
+              <td>{band.label}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>
+      Formula (provisional): <code>{METHODOLOGY.formula.tankScore}</code>
+    </p>
+  </section>
+
+  <section aria-labelledby="tiers-heading">
+    <h2 id="tiers-heading">Evidence tiers</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Tier</th>
+          <th scope="col">Source type</th>
+          <th scope="col">Can affect score?</th>
+          <th scope="col">Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          METHODOLOGY.evidenceTiers.map((tier) => (
+            <tr>
+              <td>{tier.tier}</td>
+              <td>{tier.name}</td>
+              <td>{tier.canAffectScore ? "Yes" : "No — discovery only"}</td>
+              <td>{tier.examples}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <ul>
+      {METHODOLOGY.socialSourceRules.map((rule) => <li>{rule}</li>)}
+    </ul>
+  </section>
+
+  <section aria-labelledby="guardrails-heading">
+    <h2 id="guardrails-heading">Injury and false-positive guardrails</h2>
+    <h3>Injury</h3>
+    <ul>
+      {METHODOLOGY.injuryGuardrails.map((rule) => <li>{rule}</li>)}
+    </ul>
+    <h3>False positives</h3>
+    <ul>
+      {METHODOLOGY.falsePositiveGuardrails.map((rule) => <li>{rule}</li>)}
+    </ul>
+  </section>
+
+  <section aria-labelledby="confidence-heading">
+    <h2 id="confidence-heading">Confidence meanings</h2>
+    <ul>
+      {
+        METHODOLOGY.confidence.map((item) => (
+          <li>
+            <strong>{item.level}:</strong> {item.meaning}
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section aria-labelledby="sources-heading">
+    <h2 id="sources-heading">Primary references</h2>
+    <ul>
+      <li>
+        <a
+          href="https://official.nba.com/nba-fines-utah-jazz-and-indiana-pacers/"
+          rel="noopener noreferrer"
+          target="_blank">NBA fines Utah and Indiana (outbound)</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.nba.com/news/nba-board-governors-approve-new-draft-lottery-system"
+          rel="noopener noreferrer"
+          target="_blank">NBA approves the 3-2-1 Lottery (outbound)</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://official.nba.com/nba-injury-report-2025-26-season/"
+          rel="noopener noreferrer"
+          target="_blank">NBA 2025-26 injury reports (outbound)</a
+        >
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="corrections-heading">
+    <h2 id="corrections-heading">Corrections</h2>
+    <p>{METHODOLOGY.corrections.summary}</p>
+    <p>
+      Contact: <a href={`mailto:${METHODOLOGY.corrections.contactPlaceholder}`}
+        >{METHODOLOGY.corrections.contactPlaceholder}</a
+      >
+    </p>
+    <p class="note">{METHODOLOGY.nonAffiliation}</p>
+  </section>
+
+  <section aria-labelledby="changelog-heading">
+    <h2 id="changelog-heading">Changelog</h2>
+    <ul>
+      {
+        METHODOLOGY.changelog.map((entry) => (
+          <li>
+            <strong>{entry.version}</strong> ({entry.date}): {entry.notes}
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</PageLayout>
+
+<style>
+  .method-hero {
+    margin-bottom: var(--space-6);
+  }
+
+  .eyebrow {
+    margin: 0 0 var(--space-2);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  h1 {
+    margin: 0 0 var(--space-3);
+    font-size: clamp(1.75rem, 5vw, 2.75rem);
+    line-height: 1.1;
+  }
+
+  .lede {
+    margin: 0;
+    max-width: 44rem;
+    color: var(--color-text-secondary);
+  }
+
+  section {
+    margin-bottom: var(--space-6);
+  }
+
+  h2 {
+    margin: 0 0 var(--space-3);
+    font-size: 1.35rem;
+  }
+
+  h3 {
+    margin: var(--space-3) 0 var(--space-2);
+    font-size: 1.05rem;
+  }
+
+  p,
+  li {
+    color: var(--color-text-secondary);
+  }
+
+  ul {
+    padding-left: 1.2rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-3) 0;
+    font-size: 0.95rem;
+  }
+
+  th,
+  td {
+    border: 1px solid var(--color-border);
+    padding: 0.55rem 0.65rem;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    background: var(--color-bg-muted);
+  }
+
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+  }
+
+  .note {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+  }
+
+  a[target="_blank"]::after {
+    content: " ↗";
+    font-size: 0.85em;
+  }
+</style>
