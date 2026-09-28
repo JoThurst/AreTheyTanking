@@ -4,14 +4,14 @@
     "recentForm",
     "sourceRetrievedAt"
   ],
-  "generatedAt": "2026-09-27T16:52:00.812Z",
+  "generatedAt": "2026-09-28T19:34:32.489Z",
   "inputs": {
     "coreStats": {
       "asOf": "2026-04-13T04:00:00.000Z",
       "path": "data/normalized-core-stats.json",
       "present": true,
       "season": "2025-26",
-      "sha256": "5617ac79cc52dc277ae45af93319b08c042237367226f01e24fde62809ab9ba0",
+      "sha256": "bf53e5d533ffdc6c115ea8f05386bf505404cf3068a6263589824995a545d26b",
       "sourceName": "fixture-core-stats:mock-nba-standings"
     },
     "editorialSnapshot": {
@@ -23,7 +23,7 @@
       "exportVersion": null,
       "path": "data/yunoball-enrichment.json",
       "present": true,
-      "sha256": "3c8983c6a10edb9caf08d5dab3480c5a661c2335cece9553a298eece5e19bdd7",
+      "sha256": "abaa6157a4dc8903b367f84885d80b9a08fa59dd25526a681dd2f3e7f3f3a1d3",
       "status": "skipped"
     }
   },
